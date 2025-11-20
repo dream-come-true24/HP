@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>技能実習制度｜Dream come true協同組合</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Dream come true協同組合による技能実習制度のご案内。制度の概要、期間イメージ、企業さまにとってのポイント、受入れまでの流れ、かかる費用の項目について分かりやすくまとめています。"
+  />
+  <link rel="stylesheet" href="css/style.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  >
+</head>
+<body>
+
+<!-- ▼ 共通ヘッダー -->
+<header class="header">
+  <div class="header__inner l-container">
+    <a href="index.html" class="header__logo">
+      <div class="header__logo-mark">D</div>
+      <span class="header__logo-text">Dream come true協同組合</span>
+    </a>
+
+    <nav class="header__nav" aria-label="メインメニュー">
+      <a href="about.html">組合について</a>
+      <a href="ginou-jisshu.html">技能実習制度</a>
+      <a href="ikusei-shuro.html">育成就労制度</a>
+      <a href="join.html">加入案内</a>
+      <a href="flow.html">受入れの流れ</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html" class="header__nav-cta">お問い合わせ</a>
+    </nav>
+
+    <button class="header__menu-toggle" aria-label="メニューを開く" onclick="toggleMobileNav()">☰</button>
+  </div>
+
+  <div id="mobileNav" class="mobile-nav">
+    <div class="mobile-nav__inner l-container">
+      <a href="about.html" onclick="toggleMobileNav()">組合について</a>
+      <a href="ginou-jisshu.html" onclick="toggleMobileNav()">技能実習制度</a>
+      <a href="ikusei-shuro.html" onclick="toggleMobileNav()">育成就労制度</a>
+      <a href="join.html" onclick="toggleMobileNav()">加入案内</a>
+      <a href="flow.html" onclick="toggleMobileNav()">受入れの流れ</a>
+      <a href="faq.html" onclick="toggleMobileNav()">FAQ</a>
+      <a href="contact.html" onclick="toggleMobileNav()">お問い合わせ</a>
+    </div>
+  </div>
+</header>
+
+<!-- ▼ ページタイトル -->
+<section class="l-section section--sky" style="padding: 64px 0;">
+  <div class="l-container" style="text-align:center;">
+    <h1 style="font-size:32px; font-weight:700; margin-bottom:16px;">
+      技能実習制度について
+    </h1>
+    <p style="color:#555; font-size:15px;">
+      技能実習制度の概要と、企業さまが受入れを検討する際のポイントをまとめました。
+    </p>
+  </div>
+</section>
+
+<!-- ▼ 技能実習制度とは -->
+<section class="l-section">
+  <div class="l-container">
+    <div class="section-title">
+      <span class="section-title__bar"></span>
+      <h2 class="section-title__text">技能実習制度とは</h2>
+    </div>
+
+    <p class="about-lead">
+      技能実習制度は、日本の企業で働きながら技能・技術・知識を学び、<br>
+      帰国後にその経験を活かして本国の発展に役立てることを目的とした制度です。
+    </p>
+
+    <div class="grid-2">
+      <div>
+        <p style="font-size:14px; color:#444; margin-bottom:12px;">
+          受入れ企業さまにとっては、人手不足の解消だけでなく、海外とのつながりや、
+          現場の標準化・見直しなどにつながる側面もあります。
+        </p>
+        <p style="font-size:14px; color:#444; margin-bottom:12px;">
+          一方で、制度には多くのルールがあり、適切な運用を行うことが重要です。
+          Dream come true協同組合は、制度の趣旨に沿った受入れとなるよう、
+          企業さまと実習生の双方をサポートします。
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card__icon-circle">📌</div>
+        <div class="card__title">技能実習制度のポイント</div>
+        <div class="card__body">
+          ・目的は「技能の移転」であり、単なる人手不足対策ではない<br>
+          ・受入れ人数や職種は、制度上の基準に沿って決まる<br>
+          ・労働関係法令（労基法・最低賃金など）の遵守が必要<br>
+          ・監理団体・受入れ企業・送り出し機関がそれぞれ役割を担う
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ▼ 技能実習の期間イメージ -->
+<section class="l-section section--sky">
+  <div class="l-container">
+    <div class="section-title">
+      <span class="section-title__bar"></span>
+      <h2 class="section-title__text">技能実習の期間イメージ</h2>
+    </div>
+
+    <p class="about-lead" style="margin-bottom:24px;">
+      技能実習は、一定の基準を満たすことで、段階的に期間を延長できる仕組みになっています。<br>
+      以下は一般的な期間イメージです。
+    </p>
+
+    <div class="card" style="overflow-x:auto;">
+      <table style="width:100%; border-collapse:collapse; font-size:13px;">
+        <thead>
+          <tr style="background:#eaf3ff;">
+            <th style="padding:10px; border-bottom:1px solid #d5e3ff;">年数</th>
+            <th style="padding:10px; border-bottom:1px solid #d5e3ff;">区分</th>
+            <th style="padding:10px; border-bottom:1px solid #d5e3ff;">主な内容</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="padding:10px; border-bottom:1px solid #e4e4e4; text-align:center;">1年目</td>
+            <td style="padding:10px; border-bottom:1px solid #e4e4e4;">技能実習1号</td>
+            <td style="padding:10px; border-bottom:1px solid #e4e4e4;">
+              日本での生活・職場環境に慣れながら、基本的な作業を習得する期間です。
+            </td>
+          </tr>
+          <tr style="background:#f8fbff;">
+            <td style="padding:10px; border-bottom:1px solid #e4e4e4; text-align:center;">2〜3年目</td>
+            <td style="padding:10px; border-bottom:1px solid #e4e4e4;">技能実習2号</td>
+            <td style="padding:10px; border-bottom:1px solid #e4e4e4;">
+              より高度な作業を任せられるようになり、即戦力として現場の中心を担っていく期間です。
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:10px; text-align:center;">（制度全体）</td>
+            <td style="padding:10px;">技能実習制度の見直し</td>
+            <td style="padding:10px;">
+              今後は技能実習制度から、育成就労制度へ段階的に移行していく方針が示されています。
+              詳しくは「育成就労制度」のページでご紹介しています。
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p style="font-size:12px; color:#777; margin-top:12px;">
+      ※上記は制度の一般的なイメージです。実際の受入れ可能期間や要件は、職種や企業さまの状況によって異なります。
+    </p>
+  </div>
+</section>
+
+<!-- ▼ 企業さまにとってのポイント（メリット・注意点） -->
+<section class="l-section">
+  <div class="l-container">
+    <div class="section-title">
+      <span class="section-title__bar"></span>
+      <h2 class="section-title__text">企業さまにとってのポイント</h2>
+    </div>
+
+    <p class="about-lead">
+      技能実習制度の活用には、メリットとあわせて注意すべき点もあります。<br>
+      正しく理解したうえで、貴社に合う受入れ方法を一緒に考えていきます。
+    </p>
+
+    <div class="grid-2">
+      <div class="card">
+        <div class="card__icon-circle">✅</div>
+        <div class="card__title">主なメリット</div>
+        <div class="card__body">
+          ・人材不足の職場で、中長期的に働いてくれる人材を確保できる<br>
+          ・外国人材の受入れをきっかけに、作業手順やマニュアルの整備が進む<br>
+          ・海外とのつながりができ、将来的な取引や展開のきっかけになることもある
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card__icon-circle">⚠️</div>
+        <div class="card__title">主な注意点</div>
+        <div class="card__body">
+          ・受入れ人数・職種に制度上の上限・要件がある<br>
+          ・労働時間・賃金・安全衛生など、日本人と同じように法令遵守が必要<br>
+          ・言語・文化の違いを踏まえた指導・コミュニケーションが求められる<br>
+          ・制度見直し（育成就労制度への移行）の動きがあるため、最新情報の確認が必要
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ▼ 受入れまでの主なステップへの導線 -->
+<section class="l-section section--sky">
+  <div class="l-container">
+    <div class="section-title">
+      <span class="section-title__bar"></span>
+      <h2 class="section-title__text">受入れまでの主なステップ</h2>
+    </div>
+
+    <p class="about-lead" style="margin-bottom:24px;">
+      技能実習生の受入れは、おおまかに次のような流れで進みます。<br>
+      詳細やスケジュール感は「受入れの流れ」ページでご覧いただけます。
+    </p>
+
+    <div class="step-grid">
+      <div class="card card--step">
+        <div class="card__step-number">1</div>
+        <div class="card__step-title">ご相談・ヒアリング</div>
+        <div class="card__body">
+          ご希望の人数・時期・仕事内容などを伺い、制度の概要をご説明します。
+        </div>
+      </div>
+
+      <div class="card card--step">
+        <div class="card__step-number">2</div>
+        <div class="card__step-title">加入手続き・契約締結</div>
+        <div class="card__body">
+          協同組合への加入と、監理業務の委託契約を締結します。
+        </div>
+      </div>
+
+      <div class="card card--step">
+        <div class="card__step-number">3</div>
+        <div class="card__step-title">候補者の選定・面接</div>
+        <div class="card__body">
+          候補者の紹介・面接を行い、受入れ予定の実習生を決定します。
+        </div>
+      </div>
+
+      <div class="card card--step">
+        <div class="card__step-number">4</div>
+        <div class="card__step-title">技能実習計画の作成・認定申請</div>
+        <div class="card__body">
+          実習内容の整理・必要書類のご案内を行い、計画の認定申請を進めます。
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:24px; text-align:center;">
+      <a href="flow.html" class="btn btn--secondary">受入れの流れを詳しく見る</a>
+    </div>
+  </div>
+</section>
+
+<!-- ▼ 費用について -->
+<section class="l-section">
+  <div class="l-container">
+    <div class="section-title">
+      <span class="section-title__bar"></span>
+      <h2 class="section-title__text">どのような費用がかかる？</h2>
+    </div>
+
+    <p class="about-lead">
+      技能実習生の受入れには、いくつかの費用項目があります。<br>
+      ここでは、主な項目のみを分かりやすく整理しています。
+    </p>
+
+    <div class="grid-2">
+      <div class="card">
+        <div class="card__icon-circle">💰</div>
+        <div class="card__title">主な費用項目</div>
+        <div class="card__body">
+          ・渡航費（航空券など）<br>
+          ・入国前教育に関する費用<br>
+          ・在留資格申請に必要な手続き費用<br>
+          ・監理費（監理団体によるサポート費用）<br>
+          ・寮費・水道光熱費（住居を提供する場合）<br>
+          ・健康診断・保険に関する費用　など
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card__icon-circle">📊</div>
+        <div class="card__title">お見積りについて</div>
+        <div class="card__body">
+          実際にかかる金額は、受入れ人数・職種・地域・住居形態などによって変わります。<br><br>
+          Dream come true協同組合では、<strong>面談でのヒアリング後に個別のお見積り</strong>を作成し、
+          項目ごとに分かりやすくご説明いたします。
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:24px; text-align:center;">
+      <a href="contact.html" class="btn btn--primary">費用のイメージについて相談する</a>
+    </div>
+  </div>
+</section>
+
+<!-- ▼ フッター -->
+<footer class="footer">
+  <div class="footer__top">
+    <div class="l-container footer__grid">
+
+      <div class="footer__brand">
+        <div class="footer__logo">
+          <div class="footer__logo-mark">D</div>
+          <span class="footer__logo-text">Dream come true協同組合</span>
+        </div>
+        <p class="footer__brand-message">
+          友情が照らす未来へ。<br>
+          日本と世界を、やさしく力強くつないでいく。
+        </p>
+      </div>
+
+      <div class="footer__nav">
+        <h4>メニュー</h4>
+        <ul>
+          <li><a href="about.html">組合について</a></li>
+          <li><a href="ginou-jisshu.html">技能実習制度</a></li>
+          <li><a href="ikusei-shuro.html">育成就労制度</a></li>
+          <li><a href="join.html">加入案内</a></li>
+          <li><a href="flow.html">受入れの流れ</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="news.html">お知らせ</a></li>
+          <li><a href="contact.html">お問い合わせ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__info">
+        <h4>所在地</h4>
+
+        <p class="footer__address-title">本部</p>
+        <address class="footer__address">
+          沖縄県那覇市三原1‐18‐25‐1104
+        </address>
+
+        <p class="footer__address-title">東京オフィス</p>
+        <address class="footer__address">
+          東京都新宿区高田馬場1丁目28-10<br>
+          パンフォーレ三慶ビル1階
+        </address>
+
+        <p class="footer__permit">監理団体許可番号：許2412000064</p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    <div class="l-container">
+      <p class="footer__copy">&copy; Dream come true協同組合 All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function toggleMobileNav() {
+    var nav = document.getElementById('mobileNav');
+    nav.classList.toggle('mobile-nav--open');
+  }
+</script>
+
+</body>
+</html>
