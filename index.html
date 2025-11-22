@@ -1,0 +1,1336 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <title>Dream come true協同組合｜外国人材受入れサポート</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+        name="description"
+        content="Dream come true協同組合は“友情・誠実・透明性”を大切に、技能実習・育成就労制度を通じて外国人材と日本の企業さまをつなぐ監理団体です。"
+    />
+    <!-- Noto Sans JPフォントをロード (CSSで指定されているため維持) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap"
+        rel="stylesheet"
+    >
+    
+    <style>
+/* =========================================================
+   Dream come true協同組合  共通スタイル style.css
+   ========================================================= */
+
+/* ---------- 基本設定 ---------- */
+
+:root {
+    --color-primary: #2E7DD7;
+    --color-primary-light: #5DAFFF;
+    --color-sky: #F3F9FF;
+    --color-navy: #1A2A3A;
+    --color-text-main: #1A1A1A;
+    --color-text-sub: #4D4D4D;
+    --color-border: #E4E4E4;
+    --color-bg-soft: #FAFAFA;
+
+    --font-jp: "Noto Sans JP", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --shadow-soft: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-jp);
+    color: var(--color-text-main);
+    line-height: 1.6;
+    background: #ffffff;
+    font-size: 14px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* ---------- レイアウト ---------- */
+
+.l-container {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.l-section {
+    padding: 88px 0;
+}
+
+@media (max-width: 768px) {
+    .l-section {
+        padding: 56px 0;
+    }
+}
+
+/* ---------- 共通：ボタン ---------- */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    border-radius: var(--radius-md);
+    border: 1px solid transparent;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.25s ease;
+    background: transparent;
+}
+
+.btn--primary {
+    background: var(--color-primary);
+    color: #ffffff;
+    box-shadow: var(--shadow-soft);
+}
+
+.btn--primary:hover {
+    background: var(--color-primary-light);
+}
+
+.btn--secondary {
+    background: #ffffff;
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.btn--secondary:hover {
+    background: #F7FBFF;
+}
+
+.btn--block {
+    width: 100%;
+}
+
+/* ---------- セクションタイトル ---------- */
+
+.section-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.section-title__bar {
+    width: 4px;
+    height: 28px;
+    background-color: var(--color-primary);
+    border-radius: 2px;
+    margin-right: 12px;
+}
+
+.section-title__text {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .section-title__text {
+        font-size: 20px;
+    }
+}
+
+/* ---------- 共通：カード ---------- */
+
+.card {
+    background: #ffffff;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 24px;
+}
+
+.card__icon-circle {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #EAF3FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-primary);
+    margin-bottom: 12px;
+    font-size: 22px;
+}
+
+.card__title {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.card__body {
+    font-size: 14px;
+    color: var(--color-text-sub);
+}
+
+/* ステップカード */
+
+.card--step {
+    position: relative;
+    padding-top: 28px;
+}
+
+.card__step-number {
+    position: absolute;
+    top: -20px;
+    left: 16px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--color-primary);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.card__step-title {
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
+/* ---------- グリッドレイアウト（汎用） ---------- */
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+@media (max-width: 1024px) {
+    .grid-4 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 900px) {
+    .grid-3 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .grid-4,
+    .grid-3,
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 背景色バリエーション */
+
+.section--sky {
+    background: var(--color-sky);
+}
+
+.section--soft {
+    background: var(--color-bg-soft);
+}
+
+/* ---------- ヘッダー ---------- */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 10px 0;
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+    color: var(--color-primary);
+    font-size: 18px;
+}
+
+.header__logo-mark {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #2E7DD7, #5DAFFF);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+.header__logo-text {
+    white-space: nowrap;
+}
+
+.header__nav {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    font-size: 14px;
+}
+
+.header__nav a {
+    position: relative;
+    padding-bottom: 2px;
+}
+
+.header__nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: var(--color-primary);
+    transition: width 0.2s ease;
+}
+
+.header__nav a:hover::after {
+    width: 100%;
+}
+
+.header__nav-cta {
+    padding: 6px 14px;
+    border-radius: 999px;
+    border: 1px solid var(--color-primary);
+}
+
+.header__nav-cta:hover {
+    background: var(--color-primary);
+    color: #ffffff;
+}
+
+/* スマホ用メニューアイコン */
+
+.header__menu-toggle {
+    display: none;
+    border: none;
+    background: none;
+    font-size: 24px;
+    color: var(--color-primary);
+    cursor: pointer;
+}
+
+/* スマホナビ */
+
+.mobile-nav {
+    display: none;
+    border-top: 1px solid var(--color-border);
+    background: #ffffff;
+}
+
+.mobile-nav__inner {
+    padding: 8px 16px 12px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 16px;
+    font-size: 14px;
+}
+
+.mobile-nav__inner a {
+    display: inline-block;
+}
+
+/* 開閉用クラス */
+
+.mobile-nav--open {
+    display: block;
+}
+
+@media (max-width: 900px) {
+    .header__nav {
+        display: none;
+    }
+    .header__menu-toggle {
+        display: block;
+    }
+}
+
+/* ---------- Hero（トップ用） ---------- */
+
+.hero {
+    position: relative;
+    height: 70vh;
+    min-height: 520px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero__bg {
+    position: absolute;
+    inset: 0;
+    /* プレースホルダー画像を維持 */
+    background-image: url("https://placehold.co/1200x800/2E7DD7/ffffff?text=HERO+IMAGE"); 
+    background-size: cover;
+    background-position: center;
+    filter: brightness(1.05);
+}
+
+.hero__overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at top right, rgba(255, 255, 255, 0.35), transparent 60%),
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.45));
+}
+
+.hero__content {
+    position: relative;
+    z-index: 1;
+    padding: 0 16px;
+    max-width: 720px;
+}
+
+.hero__sub {
+    font-size: 14px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    opacity: 0.85;
+}
+
+.hero__title {
+    font-size: 40px;
+    line-height: 1.4;
+    font-weight: 700;
+    margin: 0 0 16px;
+}
+
+.hero__lead {
+    font-size: 16px;
+    opacity: 0.9;
+    margin-bottom: 24px;
+}
+
+.hero__cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.hero__scroll {
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    opacity: 0.8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.hero__scroll-icon {
+    font-size: 18px;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: 70vh;
+        min-height: 460px;
+    }
+    .hero__title {
+        font-size: 28px;
+    }
+    .hero__lead {
+        font-size: 14px;
+    }
+}
+
+/* ---------- About / 説明テキスト ---------- */
+
+.about-lead {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 40px;
+    font-size: 15px;
+    color: var(--color-text-sub);
+}
+
+/* ---------- 制度説明（2カラムレイアウト） ---------- */
+
+.system-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.2fr);
+    gap: 40px;
+    align-items: center;
+}
+
+.system-image {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+    background: #dddddd;
+    aspect-ratio: 4 / 3;
+}
+
+.system-text {
+    font-size: 15px;
+    color: var(--color-text-sub);
+}
+
+.system-text p {
+    margin: 0 0 12px;
+}
+
+@media (max-width: 900px) {
+    .system-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ---------- ステップ表示（概要用グリッド） ---------- */
+
+.step-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+}
+
+@media (max-width: 1024px) {
+    .step-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 640px) {
+    .step-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ---------- お知らせリスト（トップページ用） ---------- */
+
+.news-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+@media (max-width: 900px) {
+    .news-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 640px) {
+    .news-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+.news-item--top {
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.news-item--top .news-item__link {
+    display: block;
+}
+
+.news-item--top .news-item__title {
+    font-size: 15px;
+    line-height: 1.45;
+    margin: 4px 0 0;
+    color: var(--color-text-main);
+    transition: color 0.2s ease;
+}
+
+.news-item--top .news-item__link:hover .news-item__title {
+    color: var(--color-primary);
+}
+
+.news-item--top .news-item__meta {
+    font-size: 12px;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--color-text-sub);
+}
+
+.news-item__tag {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--color-primary);
+    background: #EAF3FF;
+    white-space: nowrap;
+}
+
+.news-item__tag--seminar {
+    color: #4CAF50; /* Green */
+    background: #E8F5E9;
+}
+
+.news-item__tag--notice {
+    color: #FF9800; /* Orange */
+    background: #FFF3E0;
+}
+
+
+/* ---------- FAQ（アコーディオン） ---------- */
+
+.section--faq {
+    background: var(--color-bg-soft);
+}
+
+.faq-intro {
+    font-size: 14px;
+    color: var(--color-text-sub);
+    margin-bottom: 16px;
+}
+
+.faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.accordion {
+    margin-bottom: 12px;
+    border-radius: 10px;
+    border: 1px solid var(--color-border);
+    background: #ffffff;
+    overflow: hidden;
+}
+
+.accordion__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    cursor: pointer;
+}
+
+.accordion__question {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.accordion__icon {
+    color: var(--color-primary);
+    font-size: 18px;
+}
+
+.accordion__body {
+    display: none;
+    padding: 0 16px 14px;
+    font-size: 14px;
+    color: var(--color-text-sub);
+    background: var(--color-sky);
+}
+
+.accordion--open {
+    border-color: var(--color-primary);
+}
+
+.accordion--open .accordion__body {
+    display: block;
+}
+
+/* ---------- CTAセクション ---------- */
+
+.section--cta {
+    background: var(--color-primary);
+    color: #ffffff;
+    text-align: center;
+}
+
+.cta-title {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+.cta-text {
+    font-size: 14px;
+    margin-bottom: 24px;
+    opacity: 0.95;
+}
+
+/* ---------- フッター ---------- */
+
+.footer {
+    background: var(--color-navy);
+    color: #ffffff;
+    font-size: 13px;
+}
+
+.footer__top {
+    padding: 32px 0 12px;
+}
+
+.footer__grid {
+    display: grid;
+    grid-template-columns: 2fr 1.5fr 1.8fr;
+    gap: 24px;
+}
+
+.footer__brand {
+    max-width: 360px;
+}
+
+.footer__logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.footer__logo-mark {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #2E7DD7, #5DAFFF);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+.footer__brand-message {
+    margin: 4px 0 0;
+    line-height: 1.5;
+}
+
+.footer__nav h4,
+.footer__info h4 {
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0 0 8px;
+}
+
+.footer__nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer__nav li {
+    margin-bottom: 4px;
+}
+
+.footer__nav a {
+    opacity: 0.9;
+}
+
+.footer__nav a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.footer__address-title {
+    font-weight: 500;
+    margin: 4px 0 2px;
+}
+
+.footer__address {
+    font-style: normal;
+    margin: 0 0 6px;
+    opacity: 0.9;
+}
+
+.footer__permit {
+    margin-top: 4px;
+    opacity: 0.9;
+}
+
+.footer__bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 8px 0 16px;
+}
+
+.footer__copy {
+    text-align: center;
+    margin: 8px 0 0;
+    opacity: 0.7;
+}
+
+@media (max-width: 900px) {
+    .footer__grid {
+        grid-template-columns: 1.6fr 1.4fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .footer__grid {
+        grid-template-columns: 1fr;
+    }
+}
+    </style>
+</head>
+<body>
+
+<!-- ▼ 共通ヘッダー（header.html相当） -->
+<header class="header">
+    <div class="header__inner l-container">
+        <a href="/index.html" class="header__logo">
+            <div class="header__logo-mark">D</div>
+            <span class="header__logo-text">Dream come true協同組合</span>
+        </a>
+
+        <nav class="header__nav" aria-label="メインメニュー">
+            <a href="/about.html">組合について</a>
+            <a href="/ginou-jisshu.html">技能実習制度</a>
+            <a href="/ikusei-shuro.html">育成就労制度</a>
+            <a href="/join.html">加入案内</a>
+            <a href="/flow.html">受入れの流れ</a>
+            <a href="/faq.html">FAQ</a>
+            <a href="/contact.html" class="header__nav-cta">お問い合わせ</a>
+        </nav>
+
+        <button class="header__menu-toggle" aria-label="メニューを開く" onclick="toggleMobileNav()">
+            <span id="openIcon">☰</span>
+            <span id="closeIcon" style="display: none;">✕</span>
+        </button>
+    </div>
+
+    <!-- スマホメニュー -->
+    <div id="mobileNav" class="mobile-nav">
+        <div class="mobile-nav__inner l-container">
+            <a href="/about.html" onclick="toggleMobileNav()">組合について</a>
+            <a href="/ginou-jisshu.html" onclick="toggleMobileNav()">技能実習制度</a>
+            <a href="/ikusei-shuro.html" onclick="toggleMobileNav()">育成就労制度</a>
+            <a href="/join.html" onclick="toggleMobileNav()">加入案内</a>
+            <a href="/flow.html" onclick="toggleMobileNav()">受入れの流れ</a>
+            <a href="/faq.html" onclick="toggleMobileNav()">FAQ</a>
+            <a href="/contact.html" onclick="toggleMobileNav()">お問い合わせ</a>
+            <a href="/news.html" onclick="toggleMobileNav()">お知らせ</a> 
+        </div>
+    </div>
+</header>
+
+<!-- メインコンテンツ -->
+<main>
+    <!-- ▼ Hero -->
+    <section class="hero">
+        <div class="hero__bg"></div>
+        <div class="hero__overlay"></div>
+        <div class="hero__content">
+            <div class="hero__sub">Foreign Talent × Japan</div>
+            <h1 class="hero__title">
+                友情が照らす未来へ。<br>
+                日本と世界を、やさしく力強くつないでいく。
+            </h1>
+            <p class="hero__lead">
+                Dream come true協同組合は、“友情・誠実・透明性”を大切に、<br>
+                外国人材と日本の企業さまをサポートする監理団体です。
+            </p>
+            <div class="hero__cta">
+                <a href="/contact.html" class="btn btn--primary">
+                    <span style="margin-right: 8px;">お問い合わせフォームへ</span>
+                </a>
+            </div>
+        </div>
+        <a href="#about-digest" class="hero__scroll">
+            <span>Scroll</span>
+            <span class="hero__scroll-icon">↓</span>
+        </a>
+    </section>
+
+    <!-- ▼ 最新のお知らせ（トップページ用） -->
+    <section class="l-section section--sky" style="padding: 48px 0;">
+        <div class="l-container">
+
+            <div class="section-title">
+                <span class="section-title__bar"></span>
+                <h2 class="section-title__text">最新のお知らせ</h2>
+            </div>
+
+            <div class="news-list">
+
+                <!-- 1件目 -->
+                <article class="news-item card news-item--top">
+                    <a href="/news.html" class="news-item__link">
+                        <div class="news-item__meta">
+                            <span class="news-item__date">2025.11.14</span>
+                            <span class="news-item__tag">お知らせ</span>
+                        </div>
+                        <h3 class="news-item__title">
+                            Dream come true協同組合 ホームページを公開しました
+                        </h3>
+                    </a>
+                </article>
+
+                <!-- 2件目 -->
+                <article class="news-item card news-item--top">
+                    <a href="/news.html" class="news-item__link">
+                        <div class="news-item__meta">
+                            <span class="news-item__date">2025.11.20</span>
+                            <span class="news-item__tag news-item__tag--seminar">セミナー</span>
+                        </div>
+                        <h3 class="news-item__title">
+                            外国人材受入れの基本ポイント 説明会のご案内
+                        </h3>
+                    </a>
+                </article>
+
+                <!-- 3件目 -->
+                <article class="news-item card news-item--top">
+                    <a href="/news.html" class="news-item__link">
+                        <div class="news-item__meta">
+                            <span class="news-item__date">2025.12.05</span>
+                            <span class="news-item__tag news-item__tag--notice">制度情報</span>
+                        </div>
+                        <h3 class="news-item__title">
+                            育成就労制度に関する最新の検討状況を整理しました
+                        </h3>
+                    </a>
+                </article>
+
+            </div>
+
+            <div style="text-align:center; margin-top:24px;">
+                <a href="/news.html" class="btn btn--secondary">お知らせ一覧を見る</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ▼ 組合について（ダイジェスト） -->
+    <section class="l-section" id="about-digest">
+        <div class="l-container">
+            <div class="section-title">
+                <span class="section-title__bar"></span>
+                <h2 class="section-title__text">Dream come true協同組合とは</h2>
+            </div>
+
+            <p class="about-lead">
+                Dream come true協同組合は、国を越えて働く外国人材と日本の企業さまを、
+                “友情・誠実・透明性” を軸にサポートする監理団体です。<br>
+                実習生が安心して働ける環境づくりと、企業さまの安定した人材確保を支えるため、
+                丁寧で誠実な体制で取り組んでいます。
+            </p>
+
+            <div class="grid-3">
+                <div class="card">
+                    <div class="card__icon-circle">🤝</div>
+                    <div class="card__title">友情を大切にした運営</div>
+                    <div class="card__body">
+                        現場で働く人と企業さまの信頼関係を第一に考え、長く付き合えるパートナーとして支援します。
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card__icon-circle">🛡️</div>
+                    <div class="card__title">誠実で透明性の高いサポート</div>
+                    <div class="card__body">
+                        不正行為や過度な金銭負担を排除し、制度に沿った安心できる受入れを一緒に考えます。
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card__icon-circle">🌏</div>
+                    <div class="card__title">母国語サポート</div>
+                    <div class="card__body">
+                        ベトナム人スタッフが在籍し、実習生が母国語で相談できる体制を整えています。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ▼ 制度について（技能実習→育成就労） -->
+    <section class="l-section section--sky" id="system">
+        <div class="l-container">
+            <div class="section-title">
+                <span class="section-title__bar"></span>
+                <h2 class="section-title__text">外国人材の受入れ制度について</h2>
+            </div>
+
+            <div class="system-grid">
+                <div class="system-image">
+                    <!-- プレースホルダー画像。背景に設定 -->
+                    <img src="https://placehold.co/600x450/dddddd/333333?text=Work+Scene+Placeholder" alt="工場での作業風景のプレースホルダー">
+                </div>
+
+                <div class="system-text">
+                    <p>
+                        現在、外国人材の受入れ制度としては、技能実習制度が中心となっています。
+                        技能実習制度は、日本で技術・知識を学び、本国の発展に役立てることを目的とした制度です。
+                    </p>
+                    <p>
+                        一方で、国の方針により、今後は新たな制度である
+                        <strong>「育成就労制度」</strong> へ段階的に移行していく予定です。
+                        育成就労制度では、「労働者の育成と人材確保」が新たな目的となり、
+                        より現場の実態に即した仕組みが検討されています。
+                    </p>
+                    <p>
+                        Dream come true協同組合では、制度変更の動きも踏まえながら、
+                        企業さまにとって分かりやすく、無理のない受入れをご提案します。
+                    </p>
+                    <p style="margin-top: 16px;">
+                        詳しい内容は、「技能実習制度」「育成就労制度（新制度）」それぞれのページでご紹介しています。
+                    </p>
+
+                    <div style="margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px;">
+                        <a href="/ginou-jisshu.html" class="btn btn--secondary">技能実習制度の詳細へ</a>
+                        <a href="/ikusei-shuro.html" class="btn btn--secondary">育成就労制度の詳細へ</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ▼ 選ばれる理由 -->
+    <section class="l-section" id="reasons">
+        <div class="l-container">
+            <div class="section-title">
+                <span class="section-title__bar"></span>
+                <h2 class="section-title__text">Dream come true協同組合が選ばれる理由</h2>
+            </div>
+
+            <div class="grid-4">
+                <div class="card">
+                    <div class="card__icon-circle">💬</div>
+                    <div class="card__title">母国語（ベトナム語）での相談体制</div>
+                    <div class="card__body">
+                        実習生が困ったときに、すぐに母国語で相談できる環境を用意。早期の不安解消が、定着にもつながります。
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card__icon-circle">👀</div>
+                    <div class="card__title">丁寧な巡回・面談</div>
+                    <div class="card__body">
+                        企業さまと実習生、双方の状況を定期的に確認し、小さな違和感の段階からフォローを行います。
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card__icon-circle">📄</div>
+                    <div class="card__title">書類準備・手続きのサポート</div>
+                    <div class="card__body">
+                        必要書類の案内や内容整理・確認を丁寧に行い、初めての企業さまでもスムーズに進められるよう支援します。
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card__icon-circle">🔍</div>
+                    <div class="card__title">誠実で透明性の高い運営</div>
+                    <div class="card__body">
+                        違約金やパスポート預かりなど不適切な取扱いを行わず、不正ゼロを目指した透明性の高い運営を徹底します。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ▼ 受入れの流れ（概要） -->
+    <section class="l-section section--sky" id="flow-digest">
+        <div class="l-container">
+            <div class="section-title">
+                <span class="section-title__bar"></span>
+                <h2 class="section-title__text">受入れの流れ（概要）</h2>
+            </div>
+
+            <p class="about-lead" style="margin-bottom: 32px;">
+                受入れの流れは、大きく7つのステップで進みます。<br>
+                詳細は「受入れの流れ」ページでご案内しています。
+            </p>
+
+            <!-- ステップグリッドはCSSの step-grid (4カラム) を使用 -->
+            <div class="step-grid">
+                <div class="card card--step">
+                    <div class="card__step-number">1</div>
+                    <div class="card__step-title">ご相談・ヒアリング</div>
+                    <div class="card__body">
+                        企業さまの課題や必要な人材像、受入れのご希望時期などをお伺いします。
+                    </div>
+                </div>
+
+                <div class="card card--step">
+                    <div class="card__step-number">2</div>
+                    <div class="card__step-title">加入手続き・契約締結</div>
+                    <div class="card__body">
+                        協同組合への加入と、監理業務の委託契約を締結します。
+                    </div>
+                </div>
+
+                <div class="card card--step">
+                    <div class="card__step-number">3</div>
+                    <div class="card__step-title">候補者の選定・面接</div>
+                    <div class="card__body">
+                        候補者の紹介と面接を行い、受入れ予定の実習生を決定します。
+                    </div>
+                </div>
+
+                <div class="card card--step">
+                    <div class="card__step-number">4</div>
+                    <div class="card__step-title">技能実習計画の作成・認定申請</div>
+                    <div class="card__body">
+                        実習内容を整理し、技能実習計画を作成。OTITへ認定申請を行います。
+                    </div>
+                </div>
+
+                <div class="card card--step">
+                    <div class="card__step-number">5</div>
+                    <div class="card__step-title">在留資格認定・ビザ手続き</div>
+                    <div class="card__body">
+                        入管への在留資格認定証明書の申請と、現地でのビザ取得を進めます。
+                    </div>
+                </div>
+
+                <div class="card card--step">
+                    <div class="card__step-number">6</div>
+                    <div class="card__step-title">入国前教育・入国</div>
+                    <div class="card__body">
+                        来日前の事前教育を行い、日本入国後は講習を経て現場配属の準備を整えます。
+                    </div>
+                </div>
+
+                <div class="card card--step">
+                    <div class="card__step-number">7</div>
+                    <div class="card__step-title">配属・技能実習開始</div>
+                    <div class="card__body">
+                        企業さまの現場に配属し、技能実習がスタートします。巡回や面談で継続的にフォローします。
+                    </div>
+                </div>
+
+                <div class="card card--step">
+                    <div class="card__step-number">…</div>
+                    <div class="card__step-title">詳しい流れはこちら</div>
+                    <div class="card__body">
+                        より詳しいスケジュールや必要書類については、「受入れの流れ」ページでご確認いただけます。
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 24px; text-align: center;">
+                <a href="/flow.html" class="btn btn--secondary">受入れの流れを詳しく見る</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ▼ FAQ抜粋 -->
+    <section class="l-section section--faq" id="faq-digest">
+        <div class="l-container">
+            <div class="section-title">
+                <span class="section-title__bar"></span>
+                <h2 class="section-title__text">FAQ（よくあるご質問）</h2>
+            </div>
+
+            <p class="faq-intro">
+                よくいただくご質問の一部をご紹介します。詳細はFAQページにまとめています。
+            </p>
+
+            <div class="faq-list">
+                <!-- アコーディオンのロジックはスクリプトで実装 -->
+                <div class="accordion" onclick="toggleAccordion(this)">
+                    <div class="accordion__header">
+                        <div class="accordion__question">どのような費用がかかりますか？</div>
+                        <div class="accordion__icon">＋</div>
+                    </div>
+                    <div class="accordion__body">
+                        渡航費、入国前教育費、監理費、寮費、健康診断費用など、いくつかの費用項目があります。
+                        企業さまごとの状況により異なりますので、面談のうえお見積りをお出しします。
+                    </div>
+                </div>
+
+                <div class="accordion" onclick="toggleAccordion(this)">
+                    <div class="accordion__header">
+                        <div class="accordion__question">技能実習生の賃金はどのように決めればよいですか？</div>
+                        <div class="accordion__icon">＋</div>
+                    </div>
+                    <div class="accordion__body">
+                        最低賃金以上であることが必須です。また、日本人従業員と同等の作業を行う場合は、
+                        同じような水準になることが一般的です。詳細は面談時にご案内します。
+                    </div>
+                </div>
+
+                <div class="accordion" onclick="toggleAccordion(this)">
+                    <div class="accordion__header">
+                        <div class="accordion__question">面接はどのような方法で行いますか？</div>
+                        <div class="accordion__icon">＋</div>
+                    </div>
+                    <div class="accordion__body">
+                        現地での対面面接、オンライン面接など、企業さまのご都合に合わせた方法を選択できます。
+                    </div>
+                </div>
+
+                <div class="accordion" onclick="toggleAccordion(this)">
+                    <div class="accordion__header">
+                        <div class="accordion__question">夜間や休日のトラブル対応は可能ですか？</div>
+                        <div class="accordion__icon">＋</div>
+                    </div>
+                    <div class="accordion__body">
+                        緊急時には迅速に対応いたします。実習生が母国語で相談できるような体制も整えています。
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 24px; text-align: center;">
+                <a href="/faq.html" class="btn btn--secondary">FAQをもっと見る</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ▼ CTA（お問い合わせへの誘導） -->
+    <section class="l-section section--cta" id="contact">
+        <div class="l-container">
+            <h2 class="cta-title">まずはお気軽にご相談ください。</h2>
+            <p class="cta-text">
+                制度のことがよく分からない、受入れのイメージがつかないという段階でも大歓迎です。<br>
+                現状の課題やご希望をお伺いしながら、貴社にとって無理のない受入れ方法をご提案します。
+            </p>
+            <a href="/contact.html" class="btn btn--primary">お問い合わせフォームへ</a>
+        </div>
+    </section>
+</main>
+
+<!-- ▼ 共通フッター（footer.html相当） -->
+<footer class="footer">
+    <div class="footer__top">
+        <div class="l-container footer__grid">
+
+            <div class="footer__brand">
+                <div class="footer__logo">
+                    <div class="footer__logo-mark">D</div>
+                    <span class="footer__logo-text">Dream come true協同組合</span>
+                </div>
+                <p class="footer__brand-message">
+                    友情が照らす未来へ。<br>
+                    日本と世界を、やさしく力強くつないでいく。
+                </p>
+            </div>
+
+            <div class="footer__nav">
+                <h4>メニュー</h4>
+                <ul>
+                    <li><a href="/about.html">組合について</a></li>
+                    <li><a href="/ginou-jisshu.html">技能実習制度</a></li>
+                    <li><a href="/ikusei-shuro.html">育成就労制度</a></li>
+                    <li><a href="/join.html">加入案内</a></li>
+                    <li><a href="/flow.html">受入れの流れ</a></li>
+                    <li><a href="/faq.html">FAQ</a></li>
+                    <li><a href="/news.html">お知らせ</a></li>
+                    <li><a href="/contact.html">お問い合わせ</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__info">
+                <h4>所在地</h4>
+
+                <p class="footer__address-title">本部</p>
+                <address class="footer__address">
+                    沖縄県那覇市三原1‐18‐25‐1104
+                </address>
+
+                <p class="footer__address-title">東京オフィス</p>
+                <address class="footer__address">
+                    東京都新宿区高田馬場1丁目28-10<br>
+                    パンフォーレ三慶ビル1階
+                </address>
+
+                <p class="footer__permit">監理団体許可番号：許2412000064</p>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="footer__bottom">
+        <div class="l-container">
+            <p class="footer__copy">&copy; Dream come true協同組合 All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- ▼ スクリプト（モバイルメニュー・FAQアコーディオン） -->
+<script>
+    // モバイルメニューの開閉
+    function toggleMobileNav() {
+        const nav = document.getElementById('mobileNav');
+        const isActive = nav.classList.toggle('mobile-nav--open');
+
+        // アイコンの切り替え
+        const toggleButton = document.querySelector('.header__menu-toggle');
+        if (isActive) {
+            toggleButton.innerHTML = '✕';
+        } else {
+            toggleButton.innerHTML = '☰';
+        }
+
+        // メニューが開いているときは本文のスクロールを制御
+        document.body.style.overflow = isActive ? 'hidden' : '';
+    }
+
+    // FAQアコーディオンの開閉
+    function toggleAccordion(el) {
+        el.classList.toggle('accordion--open');
+        const icon = el.querySelector('.accordion__icon');
+        if (icon) {
+            // CSSの定義に合わせてアイコンを切り替え
+            icon.textContent = el.classList.contains('accordion--open') ? '－' : '＋';
+        }
+    }
+
+    // 初回ロード時にアイコンを正しく設定（HTMLのonloadで設定されるため、ここでは不要）
+    // window.onload = function() { ... };
+</script>
+</body>
+</html>
