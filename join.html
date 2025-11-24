@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <title>加入案内｜Dream come true協同組合</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+        name="description"
+        content="Dream come true協同組合への加入のメリットや、必要書類・加入までの流れをご案内します。外国人材の受入れを検討されている企業さま向けのページです。"
+    />
+    <!-- Tailwind CSS CDNの読み込み -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Noto Sans JPフォントの読み込み -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap"
+        rel="stylesheet"
+    >
+    <style>
+        /* グローバル設定と日本語フォントの適用 */
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            color: #1f2937; /* Gray-800 */
+            line-height: 1.6;
+        }
+
+        /* カスタムユーティリティ */
+        .l-container {
+            max-width: 1280px; /* xl */
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 1rem; /* px-4 */
+            padding-right: 1rem; /* px-4 */
+        }
+        @media (min-width: 640px) { /* sm */
+            .l-container {
+                padding-left: 1.5rem; /* sm:px-6 */
+                padding-right: 1.5rem; /* sm:px-6 */
+            }
+        }
+        @media (min-width: 1024px) { /* lg */
+            .l-container {
+                padding-left: 2rem; /* lg:px-8 */
+                padding-right: 2rem; /* lg:px-8 */
+            }
+        }
+
+        /* セクションタイトル */
+        .section-title {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+        .section-title__bar {
+            width: 8px;
+            height: 32px;
+            background-color: #3b82f6; /* Blue-500 */
+            margin-right: 1rem;
+            border-radius: 9999px;
+        }
+        .section-title__text {
+            font-size: 1.875rem; /* text-3xl */
+            font-weight: 700; /* font-bold */
+        }
+        @media (max-width: 639px) { /* Mobile adjustment */
+             .section-title__text {
+                font-size: 1.5rem; /* text-2xl */
+            }
+        }
+
+        /* カードのベーススタイル */
+        .card {
+            background-color: #ffffff;
+            padding: 1.5rem;
+            border-radius: 0.75rem; /* rounded-xl */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1); /* shadow-md */
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1); /* shadow-lg */
+        }
+
+        /* アイコン円 */
+        .card__icon-circle {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 9999px; /* rounded-full */
+            background-color: #eff6ff; /* Blue-50 */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem; /* text-2xl */
+            margin-bottom: 0.75rem;
+        }
+        .card__title {
+            font-size: 1.125rem; /* text-lg */
+            font-weight: 700; /* font-bold */
+            margin-bottom: 0.5rem;
+        }
+
+        /* ステップカード */
+        .card--step {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            padding-top: 3.5rem;
+        }
+        .card__step-number {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 9999px;
+            background-color: #3b82f6; /* Blue-500 */
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.125rem;
+        }
+
+        /* ボタン */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 500;
+            transition: background-color 0.2s, box-shadow 0.2s;
+            text-decoration: none;
+            text-align: center;
+            white-space: nowrap;
+        }
+        .btn--primary {
+            background-color: #3b82f6; /* Blue-500 */
+            color: white;
+            box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.3);
+        }
+        .btn--primary:hover {
+            background-color: #2563eb; /* Blue-600 */
+            box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.3);
+        }
+        .btn--secondary {
+            background-color: #e5e7eb; /* Gray-200 */
+            color: #1f2937; /* Gray-800 */
+        }
+        .btn--secondary:hover {
+            background-color: #d1d5db; /* Gray-300 */
+        }
+
+        /* モバイルナビゲーション */
+        .mobile-nav {
+            position: fixed;
+            top: 4rem; /* Header height */
+            right: 0;
+            width: 100%;
+            height: calc(100vh - 4rem);
+            background-color: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(5px);
+            transform: translateX(100%);
+            transition: transform 0.3s ease-in-out;
+            z-index: 40; /* Above everything but header */
+            padding: 1rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            overflow-y: auto;
+        }
+        .mobile-nav--open {
+            transform: translateX(0);
+        }
+        .mobile-nav__inner a {
+            display: block;
+            padding: 0.75rem 0;
+            font-size: 1.125rem;
+            font-weight: 500;
+            border-bottom: 1px solid #e5e7eb;
+            color: #1f2937;
+            text-decoration: none;
+        }
+        .header__menu-toggle {
+            font-size: 1.5rem;
+            border: none;
+            background: none;
+            cursor: pointer;
+            color: #1f2937;
+        }
+    </style>
+</head>
+<body>
+
+<!-- ▼ 共通ヘッダー -->
+<header class="header bg-white shadow-md sticky top-0 z-50 h-16">
+    <div class="header__inner l-container flex justify-between items-center h-full">
+        <a href="/index.html" class="header__logo flex items-center space-x-2 text-xl font-bold text-gray-900">
+            <div class="header__logo-mark w-8 h-8 rounded-full bg-blue-500 text-white flex items-center justify-center text-lg">D</div>
+            <span class="header__logo-text hidden sm:inline">Dream come true協同組合</span>
+            <span class="header__logo-text sm:hidden">DCT協同組合</span>
+        </a>
+
+        <!-- デスクトップナビゲーション -->
+        <nav class="header__nav hidden lg:flex items-center space-x-6 text-sm font-medium" aria-label="メインメニュー">
+            <a href="/about.html" class="hover:text-blue-500 transition duration-150">組合について</a>
+            <a href="/ginou-jisshu.html" class="hover:text-blue-500 transition duration-150">技能実習制度</a>
+            <a href="/ikusei-shuro.html" class="hover:text-blue-500 transition duration-150">育成就労制度</a>
+            <a href="/join.html" class="text-blue-600 font-bold border-b-2 border-blue-600 pb-1">加入案内</a>
+            <a href="/flow.html" class="hover:text-blue-500 transition duration-150">受入れの流れ</a>
+            <a href="/faq.html" class="hover:text-blue-500 transition duration-150">FAQ</a>
+            <a href="/contact.html" class="btn btn--primary ml-4">お問い合わせ</a>
+        </nav>
+
+        <!-- モバイルメニューボタン -->
+        <button class="header__menu-toggle lg:hidden" aria-label="メニューを開く" onclick="toggleMobileNav()">☰</button>
+    </div>
+
+    <!-- モバイルナビゲーション (初期状態は非表示/画面外) -->
+    <div id="mobileNav" class="mobile-nav lg:hidden">
+        <div class="mobile-nav__inner l-container">
+            <a href="/about.html" onclick="toggleMobileNav()">組合について</a>
+            <a href="/ginou-jisshu.html" onclick="toggleMobileNav()">技能実習制度</a>
+            <a href="/ikusei-shuro.html" onclick="toggleMobileNav()">育成就労制度</a>
+            <a href="/join.html" onclick="toggleMobileNav()" class="text-blue-600 font-bold">加入案内</a>
+            <a href="/flow.html" onclick="toggleMobileNav()">受入れの流れ</a>
+            <a href="/faq.html" onclick="toggleMobileNav()">FAQ</a>
+            <a href="/contact.html" onclick="toggleMobileNav()" class="bg-blue-500 text-white rounded-lg text-center mt-4 p-3 hover:bg-blue-600 transition duration-150">お問い合わせ</a>
+        </div>
+    </div>
+</header>
+
+<!-- ▼ ページタイトル -->
+<section class="py-16 bg-gray-50 border-b border-gray-200">
+    <div class="l-container text-center">
+        <h1 class="text-4xl font-extrabold mb-4 text-gray-900">
+            加入案内
+        </h1>
+        <p class="text-gray-600 text-lg">
+            Dream come true協同組合にご加入いただくことで、<br class="sm:hidden">
+            外国人材の受入れを、制度に沿って安心して進めることができます。
+        </p>
+    </div>
+</section>
+
+<!-- ▼ 加入のメリット -->
+<section class="py-16">
+    <div class="l-container">
+        <div class="section-title">
+            <span class="section-title__bar"></span>
+            <h2 class="section-title__text">Dream come true協同組合が選ばれる理由</h2>
+        </div>
+
+        <p class="text-center text-lg text-gray-600 mb-10">
+            「初めての受入れで不安」「制度が複雑でよく分からない」という企業さまでも、<br>
+            一緒に一歩ずつ進められるようなサポート体制を整えています。
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="card">
+                <div class="card__icon-circle">🤝</div>
+                <div class="card__title">企業さまに寄り添った説明</div>
+                <div class="card__body text-gray-600 text-sm">
+                    制度のポイントや受入れの流れを、専門用語をできるだけ使わず丁寧にご説明します。
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card__icon-circle">📄</div>
+                <div class="card__title">必要書類の案内・整理をサポート</div>
+                <div class="card__body text-gray-600 text-sm">
+                    何から準備すればよいか分からない場合も、必要な書類を一覧でご案内し、内容整理をお手伝いします。
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card__icon-circle">🌏</div>
+                <div class="card__title">母国語サポート</div>
+                <div class="card__body text-gray-600 text-sm">
+                    ベトナム人スタッフが在籍しており、実習生が母国語で相談できる環境を整えています。
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card__icon-circle">🔍</div>
+                <div class="card__title">誠実で透明性の高い運営</div>
+                <div class="card__body text-gray-600 text-sm">
+                    不適切な費用負担や違法な取り扱いを行わず、制度に沿ったクリーンな受入れを徹底しています。
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ▼ 加入〜受入れまでの流れ（短縮版） -->
+<section class="py-16 bg-blue-50">
+    <div class="l-container">
+        <div class="section-title">
+            <span class="section-title__bar"></span>
+            <h2 class="section-title__text">加入から受入れまでの流れ（概要）</h2>
+        </div>
+
+        <p class="text-center text-lg text-gray-600 mb-10">
+            Dream come true協同組合への加入は、受入れのご相談とあわせて進めていきます。<br>
+            詳しいスケジュールは、別ページ「受入れの流れ」でご紹介しています。
+        </p>
+
+        <div class="step-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="card card--step h-full">
+                <div class="card__step-number">1</div>
+                <div class="card__step-title font-medium text-lg mb-1">お問い合わせ・ご相談</div>
+                <div class="card__body text-gray-600 text-sm">
+                    貴社の業種・人員計画・現状のお困りごとなどを、お聞かせください。
+                </div>
+            </div>
+
+            <div class="card card--step h-full">
+                <div class="card__step-number">2</div>
+                <div class="card__step-title font-medium text-lg mb-1">制度・受入れ方法のご説明</div>
+                <div class="card__body text-gray-600 text-sm">
+                    技能実習制度や、今後の育成就労制度の方向性について、分かりやすくご案内します。
+                </div>
+            </div>
+
+            <div class="card card--step h-full">
+                <div class="card__step-number">3</div>
+                <div class="card__step-title font-medium text-lg mb-1">組合加入・監理委託契約の締結</div>
+                <div class="card__body text-gray-600 text-sm">
+                    協同組合への加入と、監理業務の委託契約を締結します。
+                </div>
+            </div>
+
+            <div class="card card--step h-full">
+                <div class="card__step-number">4</div>
+                <div class="card__step-title font-medium text-lg mb-1">候補者のご提案・面接</div>
+                <div class="card__body text-gray-600 text-sm">
+                    受入れ人数や時期に応じて候補者をご紹介し、面接を実施します。
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-8 text-center">
+            <a href="/flow.html" class="btn btn--secondary inline-flex items-center space-x-2">
+                <span>受入れの流れを詳しく見る</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ▼ 加入時にご準備いただく主な書類 -->
+<section class="py-16">
+    <div class="l-container">
+        <div class="section-title">
+            <span class="section-title__bar"></span>
+            <h2 class="section-title__text">加入時にご準備いただく主な書類</h2>
+        </div>
+
+        <p class="text-center text-lg text-gray-600 mb-10">
+            詳細な書式は、面談時に個別にご案内いたします。<br>
+            ここでは、一般的にご準備いただく書類のイメージをお伝えします。
+        </p>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div class="card">
+                <div class="card__icon-circle">🏢</div>
+                <div class="card__title">企業さまに関する書類</div>
+                <div class="card__body text-gray-600 text-sm space-y-2">
+                    <ul class="list-none space-y-1 pl-4">
+                        <li>・会社概要が分かるもの（パンフレット・会社案内 等）</li>
+                        <li>・登記事項証明書</li>
+                        <li>・直近の決算書の写し　など</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card__icon-circle">🧾</div>
+                <div class="card__title">受入れ計画に関する書類</div>
+                <div class="card__body text-gray-600 text-sm space-y-2">
+                    <ul class="list-none space-y-1 pl-4">
+                        <li>・受入れ予定人数と時期</li>
+                        <li>・予定している作業内容の概要</li>
+                        <li>・勤務時間・シフトのイメージ</li>
+                        <li>・住居（寮）に関する情報 など</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <p class="text-xs text-gray-500 mt-4 text-center">
+            ※上記はあくまで一例です。業種や受入れ人数により、追加で必要となる書類があります。<br>
+            必要書類は、Dream come true協同組合より一覧でご案内し、内容整理もサポートいたします。
+        </p>
+    </div>
+</section>
+
+<!-- ▼ どのような費用がかかる？（案内） -->
+<section class="py-16 bg-blue-50">
+    <div class="l-container">
+        <div class="section-title">
+            <span class="section-title__bar"></span>
+            <h2 class="section-title__text">どのような費用がかかる？</h2>
+        </div>
+
+        <p class="text-center text-lg text-gray-600 mb-10">
+            技能実習生の受入れにかかる費用は、<br>
+            「制度上必要な費用」と「企業さまの受入れ体制に応じた費用」に分かれます。
+        </p>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div class="card">
+                <div class="card__icon-circle">💡</div>
+                <div class="card__title">主な費用項目の例</div>
+                <div class="card__body text-gray-600 text-sm space-y-2">
+                    <ul class="list-none space-y-1 pl-4">
+                        <li>・渡航費（航空券 等）</li>
+                        <li>・入国前教育にかかる費用</li>
+                        <li>・在留資格申請に伴う手続き費用</li>
+                        <li>・監理費</li>
+                        <li>・住居に関する費用（寮費・水道光熱費 等）</li>
+                        <li>・健康診断・保険に関する費用　など</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card__icon-circle">📊</div>
+                <div class="card__title">お見積りについて</div>
+                <div class="card__body text-gray-600 text-sm">
+                    実際の金額は、受入れ人数・時期・職種・地域・寮の有無などにより変わります。<br><br>
+                    Dream come true協同組合では、<strong class="text-blue-600">面談後に企業さまごとにお見積り</strong>を作成し、<br>
+                    費用項目ごとに分かりやすくご説明します。
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-10 text-center">
+            <a href="/contact.html" class="btn btn--primary">費用や条件について相談する</a>
+        </div>
+    </div>
+</section>
+
+<!-- ▼ CTA：まずは情報収集から -->
+<section class="py-16 bg-blue-700 text-white">
+    <div class="l-container text-center">
+        <h2 class="text-3xl font-extrabold mb-4 cta-title">「少し話を聞いてみる」だけでも大歓迎です。</h2>
+        <p class="text-xl mb-8 cta-text">
+            具体的な人数や時期が決まっていなくても、<br>
+            「将来に向けて情報だけ知っておきたい」という段階からご相談いただけます。<br>
+            貴社の状況を伺いながら、無理のない受入れ方法をご提案します。
+        </p>
+        <a href="/contact.html" class="btn btn--primary bg-white text-blue-700 hover:bg-gray-100">加入や受入れについて相談する</a>
+    </div>
+</section>
+
+<!-- ▼ フッター -->
+<footer class="footer bg-gray-800 text-gray-300">
+    <div class="footer__top py-12">
+        <div class="l-container grid grid-cols-1 md:grid-cols-4 gap-10">
+
+            <div class="footer__brand col-span-1 md:col-span-2">
+                <div class="footer__logo flex items-center space-x-2 text-2xl font-bold mb-4">
+                    <div class="footer__logo-mark w-8 h-8 rounded-full bg-blue-500 text-white flex items-center justify-center text-lg">D</div>
+                    <span class="footer__logo-text text-white">Dream come true協同組合</span>
+                </div>
+                <p class="footer__brand-message text-sm">
+                    友情が照らす未来へ。<br>
+                    日本と世界を、やさしく力強くつないでいく。
+                </p>
+            </div>
+
+            <div class="footer__nav">
+                <h4 class="text-lg font-semibold mb-3 text-white">メニュー</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="/about.html" class="hover:text-white transition duration-150">組合について</a></li>
+                    <li><a href="/ginou-jisshu.html" class="hover:text-white transition duration-150">技能実習制度</a></li>
+                    <li><a href="/ikusei-shuro.html" class="hover:text-white transition duration-150">育成就労制度</a></li>
+                    <li><a href="/join.html" class="text-blue-400 font-bold">加入案内</a></li>
+                    <li><a href="/flow.html" class="hover:text-white transition duration-150">受入れの流れ</a></li>
+                    <li><a href="/faq.html" class="hover:text-white transition duration-150">FAQ</a></li>
+                    <li><a href="/news.html" class="hover:text-white transition duration-150">お知らせ</a></li>
+                    <li><a href="/contact.html" class="hover:text-white transition duration-150">お問い合わせ</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__info">
+                <h4 class="text-lg font-semibold mb-3 text-white">所在地</h4>
+
+                <p class="footer__address-title font-medium text-white mt-4">本部</p>
+                <address class="footer__address text-sm not-italic">
+                    沖縄県那覇市三原1‐18‐25‐1104
+                </address>
+
+                <p class="footer__address-title font-medium text-white mt-4">東京オフィス</p>
+                <address class="footer__address text-sm not-italic">
+                    東京都新宿区高田馬場1丁目28-10<br>
+                    パンフォーレ三慶ビル1階
+                </address>
+
+                <p class="footer__permit text-xs mt-6 text-gray-500">監理団体許可番号：許2412000064</p>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="footer__bottom border-t border-gray-700 py-4">
+        <div class="l-container">
+            <p class="footer__copy text-center text-sm text-gray-500">&copy; Dream come true協同組合 All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // モバイルナビゲーションのトグル機能
+    function toggleMobileNav() {
+        const nav = document.getElementById('mobileNav');
+        nav.classList.toggle('mobile-nav--open');
+        
+        // メニュー開閉時にbodyのスクロールを制御
+        if (nav.classList.contains('mobile-nav--open')) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+    }
+</script>
+
+</body>
+</html>

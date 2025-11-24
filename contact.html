@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <title>お問い合わせ｜Dream come true協同組合</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+        name="description"
+        content="技能実習や育成就労制度、外国人材の受入れについてのご相談・お問い合わせはこちらのフォームから承ります。"
+    />
+    <!-- Tailwind CSS CDNを読み込み -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
+        rel="stylesheet"
+    >
+    <style>
+        /* Noto Sans JPを優先的に使用するTailwind設定 */
+        :root {
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        /* カスタムTailwind設定 */
+        .header__logo-mark {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            background-color: #3b82f6; /* Blue 500 */
+            color: white;
+            font-weight: 900;
+            font-size: 20px;
+            border-radius: 9999px;
+            margin-right: 8px;
+        }
+
+        /* モバイルナビゲーションのスタイル */
+        .mobile-nav {
+            position: fixed;
+            top: 64px; /* ヘッダーの高さに合わせて調整 */
+            left: 0;
+            width: 100%;
+            height: calc(100% - 64px);
+            background-color: white;
+            z-index: 40;
+            transform: translateX(100%);
+            transition: transform 0.3s ease-out;
+            overflow-y: auto;
+            padding: 16px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        .mobile-nav--open {
+            transform: translateX(0);
+        }
+        .mobile-nav a {
+            display: block;
+            padding: 12px 16px;
+            font-size: 16px;
+            font-weight: 500;
+            color: #1f2937; /* Gray 800 */
+            border-radius: 8px;
+            margin-bottom: 4px;
+            transition: background-color 0.2s;
+        }
+        .mobile-nav a:hover {
+            background-color: #f3f4f6; /* Gray 100 */
+        }
+        
+        /* フォーム要素の基本スタイル */
+        .form__input, .form__select, .form__textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #d1d5db; /* Gray 300 */
+            border-radius: 8px;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            outline: none;
+        }
+        .form__input:focus, .form__select:focus, .form__textarea:focus {
+            border-color: #3b82f6; /* Blue 500 */
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
+        }
+
+        /* カスタムチェックボックス/ラジオボタンのスタイル */
+        .form__checkbox-group label.form__checkbox {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 8px;
+            cursor: pointer;
+        }
+        .form__checkbox-group input[type="checkbox"] {
+            /* 組み込みのチェックボックスを非表示にし、カスタムスタイルを適用 */
+            appearance: none;
+            -webkit-appearance: none;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #9ca3af; /* Gray 400 */
+            border-radius: 4px;
+            margin-right: 12px;
+            flex-shrink: 0;
+            cursor: pointer;
+            position: relative;
+            transition: all 0.2s;
+        }
+        .form__checkbox-group input[type="checkbox"]:checked {
+            background-color: #3b82f6; /* Blue 500 */
+            border-color: #3b82f6;
+        }
+        .form__checkbox-group input[type="checkbox"]:checked::after {
+            content: '✓';
+            color: white;
+            font-size: 14px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-weight: 700;
+        }
+        .form__checkbox-group label.form__checkbox span {
+            line-height: 1.5;
+            padding-top: 2px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+<!-- ▼ 共通ヘッダー -->
+<header class="sticky top-0 z-50 bg-white shadow-md header">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+        <a href="/index.html" class="flex items-center header__logo">
+            <div class="header__logo-mark">D</div>
+            <span class="text-xl font-bold text-gray-900 header__logo-text">Dream come true協同組合</span>
+        </a>
+
+        <!-- デスクトップナビゲーション -->
+        <nav class="hidden lg:flex items-center space-x-6 text-sm font-medium" aria-label="メインメニュー">
+            <a href="/about.html" class="text-gray-600 hover:text-blue-600 transition duration-200">組合について</a>
+            <a href="/ginou-jisshu.html" class="text-gray-600 hover:text-blue-600 transition duration-200">技能実習制度</a>
+            <a href="/ikusei-shuro.html" class="text-gray-600 hover:text-blue-600 transition duration-200">育成就労制度</a>
+            <a href="/join.html" class="text-gray-600 hover:text-blue-600 transition duration-200">加入案内</a>
+            <a href="/flow.html" class="text-gray-600 hover:text-blue-600 transition duration-200">受入れの流れ</a>
+            <a href="/faq.html" class="text-gray-600 hover:text-blue-600 transition duration-200">FAQ</a>
+            <a href="/contact.html" class="px-4 py-2 bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600 transition duration-200 font-semibold header__nav-cta">お問い合わせ</a>
+        </nav>
+
+        <!-- モバイルメニュートグル -->
+        <button class="lg:hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100 transition duration-200 header__menu-toggle" aria-label="メニューを開く" onclick="toggleMobileNav()">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+        </button>
+    </div>
+
+    <!-- モバイルナビゲーション -->
+    <div id="mobileNav" class="mobile-nav lg:hidden">
+        <div class="mobile-nav__inner">
+            <a href="/about.html" onclick="toggleMobileNav()">組合について</a>
+            <a href="/ginou-jisshu.html" onclick="toggleMobileNav()">技能実習制度</a>
+            <a href="/ikusei-shuro.html" onclick="toggleMobileNav()">育成就労制度</a>
+            <a href="/join.html" onclick="toggleMobileNav()">加入案内</a>
+            <a href="/flow.html" onclick="toggleMobileNav()">受入れの流れ</a>
+            <a href="/faq.html" onclick="toggleMobileNav()">FAQ</a>
+            <a href="/contact.html" onclick="toggleMobileNav()" class="bg-blue-500 text-white hover:bg-blue-600">お問い合わせ</a>
+        </div>
+    </div>
+</header>
+
+<!-- ▼ ページタイトル -->
+<section class="bg-blue-50/50 py-16 l-section section--sky border-b border-blue-100">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-4">
+            お問い合わせ
+        </h1>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            技能実習・育成就労の制度説明から、受入れ準備・費用のご相談まで、<br class="hidden sm:inline">
+            小さなご質問でもお気軽にお問い合わせください。
+        </p>
+    </div>
+</section>
+
+<!-- ▼ お問い合わせフォーム -->
+<section class="py-16 md:py-24 l-section">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 items-start">
+
+            <!-- 左：説明テキスト -->
+            <div>
+                <div class="mb-8">
+                    <div class="flex items-center mb-4 section-title">
+                        <span class="w-2 h-6 bg-blue-500 rounded-full mr-3 section-title__bar"></span>
+                        <h2 class="text-2xl font-bold text-gray-800 section-title__text">お問い合わせの前に</h2>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <p class="text-base text-gray-700 leading-relaxed">
+                        まだ「受入れ人数も時期も決まっていない」という企業さまからのご相談も多くいただいています。<br>
+                        その段階から情報整理のお手伝いをいたしますので、構えずにご連絡ください。
+                    </p>
+
+                    <p class="text-sm font-semibold text-gray-800">特にこのようなご相談を歓迎しています：</p>
+                    <ul class="list-disc ml-6 text-gray-700 text-base space-y-2">
+                        <li>制度の概要だけ聞いてみたい</li>
+                        <li>自社で受入れが可能かどうか知りたい</li>
+                        <li>概算の費用感を知りたい</li>
+                        <li>現在の人手不足の状況を相談したい</li>
+                    </ul>
+
+                    <p class="text-xs text-gray-500 pt-4 border-t border-gray-200">
+                        <span class="font-bold">※</span> 内容によっては、お電話やオンライン面談のご提案をさせていただく場合がございます。<br>
+                        <span class="font-bold">※</span> 営業目的のご連絡はご遠慮ください。
+                    </p>
+                </div>
+            </div>
+
+            <!-- 右：フォーム -->
+            <div>
+                <div class="bg-white p-6 sm:p-8 rounded-xl shadow-2xl card">
+                    <!-- action と method は、実装時に変更してください -->
+                    <form class="space-y-6 form" action="#" method="post" novalidate>
+                        
+                        <!-- 会社名 -->
+                        <div class="form__group">
+                            <label for="company" class="block text-sm font-medium text-gray-700 form__label">
+                                会社名
+                                <span class="inline-block bg-red-500 text-white text-xs font-bold px-2 py-0.5 ml-2 rounded form__required">必須</span>
+                            </label>
+                            <input type="text" id="company" name="company" class="mt-1 form__input" required>
+                        </div>
+
+                        <!-- 部署・役職 -->
+                        <div class="form__group">
+                            <label for="dept" class="block text-sm font-medium text-gray-700 form__label">部署名・役職</label>
+                            <input type="text" id="dept" name="dept" class="mt-1 form__input">
+                        </div>
+
+                        <!-- 担当者名 -->
+                        <div class="form__group">
+                            <label for="name" class="block text-sm font-medium text-gray-700 form__label">
+                                ご担当者名
+                                <span class="inline-block bg-red-500 text-white text-xs font-bold px-2 py-0.5 ml-2 rounded form__required">必須</span>
+                            </label>
+                            <input type="text" id="name" name="name" class="mt-1 form__input" required>
+                        </div>
+
+                        <!-- メール -->
+                        <div class="form__group">
+                            <label for="email" class="block text-sm font-medium text-gray-700 form__label">
+                                メールアドレス
+                                <span class="inline-block bg-red-500 text-white text-xs font-bold px-2 py-0.5 ml-2 rounded form__required">必須</span>
+                            </label>
+                            <input type="email" id="email" name="email" class="mt-1 form__input" required>
+                        </div>
+
+                        <!-- 電話番号 -->
+                        <div class="form__group">
+                            <label for="tel" class="block text-sm font-medium text-gray-700 form__label">電話番号</label>
+                            <input type="tel" id="tel" name="tel" class="mt-1 form__input" placeholder="例）098-xxx-xxxx">
+                        </div>
+
+                        <!-- 業種 -->
+                        <div class="form__group">
+                            <label for="industry" class="block text-sm font-medium text-gray-700 form__label">業種</label>
+                            <input type="text" id="industry" name="industry" class="mt-1 form__input" placeholder="例）食品製造、スーパー、介護 など">
+                        </div>
+
+                        <!-- 相談内容の区分 -->
+                        <div class="form__group">
+                            <p class="block text-sm font-medium text-gray-700 form__label mb-2">ご相談内容（複数選択可）</p>
+                            <div class="space-y-2 form__checkbox-group">
+                                <label class="form__checkbox">
+                                    <input type="checkbox" name="topic" value="制度の説明を聞きたい">
+                                    <span>制度の説明を聞きたい（技能実習・育成就労）</span>
+                                </label>
+                                <label class="form__checkbox">
+                                    <input type="checkbox" name="topic" value="受入れが可能か知りたい">
+                                    <span>自社で受入れが可能か知りたい</span>
+                                </label>
+                                <label class="form__checkbox">
+                                    <input type="checkbox" name="topic" value="費用の目安を知りたい">
+                                    <span>費用の目安を知りたい</span>
+                                </label>
+                                <label class="form__checkbox">
+                                    <input type="checkbox" name="topic" value="スケジュール相談">
+                                    <span>受入れ時期・スケジュールの相談</span>
+                                </label>
+                                <label class="form__checkbox">
+                                    <input type="checkbox" name="topic" value="その他">
+                                    <span>その他</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- 受入れ検討時期 -->
+                        <div class="form__group">
+                            <label for="timeline" class="block text-sm font-medium text-gray-700 form__label">受入れの検討時期</label>
+                            <select id="timeline" name="timeline" class="mt-1 form__select">
+                                <option value="">選択してください</option>
+                                <option value="半年以内">半年以内に受入れしたい</option>
+                                <option value="1年以内">1年以内に受入れしたい</option>
+                                <option value="時期未定">時期は未定だが情報収集したい</option>
+                                <option value="その他">その他</option>
+                            </select>
+                        </div>
+
+                        <!-- お問い合わせ内容 -->
+                        <div class="form__group">
+                            <label for="message" class="block text-sm font-medium text-gray-700 form__label">
+                                お問い合わせ内容
+                                <span class="inline-block bg-red-500 text-white text-xs font-bold px-2 py-0.5 ml-2 rounded form__required">必須</span>
+                            </label>
+                            <textarea id="message" name="message" class="mt-1 form__textarea" rows="6" required></textarea>
+                        </div>
+
+                        <!-- 個人情報の取扱い -->
+                        <div class="form__group">
+                            <label class="form__checkbox items-start">
+                                <input type="checkbox" name="privacy" value="agree" required>
+                                <span class="text-sm text-gray-700">
+                                    個人情報の取扱いに同意します。
+                                    <span class="block text-xs text-gray-500">（お問い合わせ内容への回答以外の目的では利用いたしません）</span>
+                                </span>
+                            </label>
+                        </div>
+
+                        <!-- 送信ボタン -->
+                        <div class="form__group pt-4 text-center">
+                            <button type="submit" class="btn btn--primary w-full sm:w-auto px-10 py-3 bg-blue-500 text-white font-bold rounded-xl shadow-lg hover:bg-blue-600 transition duration-300 transform hover:scale-[1.01] focus:outline-none focus:ring-4 focus:ring-blue-500/50">
+                                送信する
+                            </button>
+                        </div>
+
+                        <p class="text-xs text-gray-500 text-center">
+                            ※送信後、数営業日以内に担当者よりご連絡いたします。<br>
+                            ※フォーム送信がうまくいかない場合は、お電話またはメールにてお問い合わせください。
+                        </p>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ▼ 連絡先 -->
+<section class="bg-gray-100/70 py-12 l-section section--sky">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-8">
+            <div class="flex items-center section-title mb-4">
+                <span class="w-2 h-6 bg-blue-500 rounded-full mr-3 section-title__bar"></span>
+                <h2 class="text-2xl font-bold text-gray-800 section-title__text">連絡先情報</h2>
+            </div>
+        </div>
+
+        <p class="text-base text-gray-700 mb-4">
+            フォームのほか、以下の連絡先からもお問い合わせいただけます。（※情報は後日更新）
+        </p>
+
+        <ul class="text-base text-gray-700 space-y-2">
+            <li><span class="font-semibold w-24 inline-block">電話番号:</span> 準備中</li>
+            <li><span class="font-semibold w-24 inline-block">メールアドレス:</span> 準備中</li>
+        </ul>
+    </div>
+</section>
+
+<!-- ▼ フッター -->
+<footer class="footer bg-gray-900 text-white">
+    <div class="py-12 md:py-16 footer__top">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-8 footer__grid">
+
+            <!-- ブランド -->
+            <div class="md:col-span-2 footer__brand">
+                <div class="flex items-center mb-4 footer__logo">
+                    <div class="header__logo-mark bg-white text-gray-900">D</div>
+                    <span class="text-xl font-bold footer__logo-text">Dream come true協同組合</span>
+                </div>
+                <p class="text-gray-400 text-sm max-w-sm footer__brand-message">
+                    友情が照らす未来へ。<br>
+                    日本と世界を、やさしく力強くつないでいく。
+                </p>
+            </div>
+
+            <!-- ナビゲーション -->
+            <div class="footer__nav">
+                <h4 class="text-lg font-semibold mb-4 text-blue-300">メニュー</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="/about.html" class="text-gray-400 hover:text-white transition duration-200">組合について</a></li>
+                    <li><a href="/ginou-jisshu.html" class="text-gray-400 hover:text-white transition duration-200">技能実習制度</a></li>
+                    <li><a href="/ikusei-shuro.html" class="text-gray-400 hover:text-white transition duration-200">育成就労制度</a></li>
+                    <li><a href="/join.html" class="text-gray-400 hover:text-white transition duration-200">加入案内</a></li>
+                    <li><a href="/flow.html" class="text-gray-400 hover:text-white transition duration-200">受入れの流れ</a></li>
+                    <li><a href="/faq.html" class="text-gray-400 hover:text-white transition duration-200">FAQ</a></li>
+                    <li><a href="/news.html" class="text-gray-400 hover:text-white transition duration-200">お知らせ</a></li>
+                    <li><a href="/contact.html" class="text-gray-400 hover:text-white transition duration-200">お問い合わせ</a></li>
+                </ul>
+            </div>
+
+            <!-- 所在地 -->
+            <div class="footer__info">
+                <h4 class="text-lg font-semibold mb-4 text-blue-300">所在地</h4>
+
+                <p class="text-sm font-semibold mb-1 mt-4 text-gray-300 footer__address-title">本部</p>
+                <address class="text-gray-400 text-sm not-italic footer__address">
+                    沖縄県那覇市三原1‐18‐25‐1104
+                </address>
+
+                <p class="text-sm font-semibold mb-1 mt-4 text-gray-300 footer__address-title">東京オフィス</p>
+                <address class="text-gray-400 text-sm not-italic footer__address">
+                    東京都新宿区高田馬場1丁目28-10<br>
+                    パンフォーレ三慶ビル1階
+                </address>
+
+                <p class="text-xs text-gray-500 mt-6 footer__permit">監理団体許可番号：許2412000064</p>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="footer__bottom border-t border-gray-700/50 py-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p class="text-center text-xs text-gray-500 footer__copy">&copy; Dream come true協同組合 All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    /**
+     * モバイルナビゲーションの表示・非表示を切り替える
+     */
+    function toggleMobileNav() {
+        var nav = document.getElementById('mobileNav');
+        var is_open = nav.classList.toggle('mobile-nav--open');
+        
+        // メニューボタンのアイコンを切り替える
+        var button = document.querySelector('.header__menu-toggle');
+        if (is_open) {
+            button.innerHTML = '<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>';
+            document.body.style.overflow = 'hidden'; // 背景スクロールを無効化
+        } else {
+            button.innerHTML = '<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>';
+            document.body.style.overflow = ''; // 背景スクロールを有効化
+        }
+    }
+</script>
+
+</body>
+</html>
