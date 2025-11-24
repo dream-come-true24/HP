@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <title>Dream come true協同組合｜外国人材受入れサポート</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+        name="description"
+        content="Dream come true協同組合は“友情・誠実・透明性”を大切に、技能実習・育成就労制度を通じて外国人材と日本の企業さまをつなぐ監理団体です。"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap"
+        rel="stylesheet"
+    >
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="header__inner l-container">
+        <a href="index.html" class="header__logo">
+            <div class="header__logo-mark">D</div>
+            <span>Dream come true協同組合</span>
+        </a>
+
+        <nav class="header__nav">
+            <a href="about.html">組合について</a>
+            <a href="ginou-jisshu.html">技能実習制度</a>
+            <a href="ikusei-shuro.html">育成就労制度</a>
+            <a href="join.html">加入案内</a>
+            <a href="flow.html">受入れの流れ</a>
+            <a href="faq.html">FAQ</a>
+            <a href="contact.html" class="header__cta">お問い合わせ</a>
+        </nav>
+
+        <button class="header__menu-toggle" aria-label="メニューを開く" onclick="toggleMobileNav()">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+        </button>
+    </div>
+
+    <div id="mobileNav" class="mobile-nav">
+        <div class="flex flex-col space-y-1">
+            <a href="about.html" onclick="toggleMobileNav()">組合について</a>
+            <a href="ginou-jisshu.html" onclick="toggleMobileNav()">技能実習制度</a>
+            <a href="ikusei-shuro.html" onclick="toggleMobileNav()">育成就労制度</a>
+            <a href="join.html" onclick="toggleMobileNav()">加入案内</a>
+            <a href="flow.html" onclick="toggleMobileNav()">受入れの流れ</a>
+            <a href="faq.html" onclick="toggleMobileNav()">FAQ</a>
+            <a href="contact.html" onclick="toggleMobileNav()" class="text-blue-600 font-bold">お問い合わせ</a>
+            <a href="news.html" onclick="toggleMobileNav()">お知らせ</a>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="hero-bg relative">
+        <div class="absolute inset-0 bg-black/40"></div> <div class="relative z-10 px-4 max-w-3xl mx-auto">
+            <p class="text-sm tracking-widest uppercase mb-4 opacity-90">Foreign Talent × Japan</p>
+            <h1 class="text-3xl md:text-5xl font-bold mb-6 leading-tight">
+                友情が照らす未来へ。<br>
+                日本と世界を、<br class="sm:hidden">やさしく力強くつないでいく。
+            </h1>
+            <p class="text-base md:text-lg mb-8 opacity-95">
+                Dream come true協同組合は、“友情・誠実・透明性”を大切に、<br class="hidden md:inline">
+                外国人材と日本の企業さまをサポートする監理団体です。
+            </p>
+            <a href="contact.html" class="btn btn--primary bg-white text-blue-600 hover:bg-gray-100 hover:text-blue-700 border-none">
+                お問い合わせフォームへ
+            </a>
+        </div>
+    </section>
+
+    <section class="l-section bg-sky">
+        <div class="l-container">
+            <div class="section-title section-title--center">
+                <span class="section-title__bar"></span>
+                <h2 class="section-title__text">最新のお知らせ</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <article class="card hover:shadow-lg transition">
+                    <a href="news.html" class="block h-full">
+                        <div class="flex items-center space-x-3 mb-2 text-xs text-gray-500">
+                            <time>2025.11.14</time>
+                            <span class="bg-blue-100 text-blue-800 px-2 py-0.5 rounded">お知らせ</span>
+                        </div>
+                        <h3 class="font-bold text-gray-800 group-hover:text-blue-600">
+                            Dream come true協同組合 ホームページを公開しました
+                        </h3>
+                    </a>
+                </article>
+
+                <article class="card hover:shadow-lg transition">
+                    <a href="news.html" class="block h-full">
+                        <div class="flex items-center space-x-3 mb-2 text-xs text-gray-500">
+                            <time>2025.11.20</time>
+                            <span class="bg-green-100 text-green-800 px-2 py-0.5 rounded">セミナー</span>
+                        </div>
+                        <h3 class="font-bold text-gray-800">
+                            外国人材受入れの基本ポイント 説明会のご案内
+                        </h3>
+                    </a>
+                </article>
+
+                <article class="card hover:shadow-lg transition">
+                    <a href="news.html" class="block h-full">
+                        <div class="flex items-center space-x-3 mb-2 text-xs text-gray-500">
+                            <time>2025.12.05</time>
+                            <span class="bg-orange-100 text-orange-800 px-2 py-0.5 rounded">制度情報</span>
+                        </div>
+                        <h3 class="font-bold text-gray-800">
+                            育成就労制度に関する最新の検討状況を整理しました
+                        </h3>
+                    </a>
+                </article>
+            </div>
+
+            <div class="text-center">
+                <a href="news.html" class="btn btn--secondary px-6 py-2 text-sm">お知らせ一覧を見る</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="l-section bg-white" id="about-digest">
+        <div class="l-container">
+            <div class="section-title section-title--center">
+                <span class="section-title__bar"></span>
+                <h2 class="section-title__text">Dream come true協同組合とは</h2>
+            </div>
+
+            <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12">
+                国を越えて働く外国人材と日本の企業さまを、“友情・誠実・透明性” を軸にサポートする監理団体です。<br>
+                実習生が安心して働ける環境づくりと、企業さまの安定した人材確保を支えるため、丁寧で誠実な体制で取り組んでいます。
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="card text-center">
+                    <div class="card__icon-circle mx-auto">🤝</div>
+                    <h3 class="card__title text-lg">友情を大切にした運営</h3>
+                    <p class="text-sm text-gray-600">
+                        現場で働く人と企業さまの信頼関係を第一に考え、長く付き合えるパートナーとして支援します。
+                    </p>
+                </div>
+
+                <div class="card text-center">
+                    <div class="card__icon-circle mx-auto">🛡️</div>
+                    <h3 class="card__title text-lg">誠実で透明性の高いサポート</h3>
+                    <p class="text-sm text-gray-600">
+                        不正行為や過度な金銭負担を排除し、制度に沿った安心できる受入れを一緒に考えます。
+                    </p>
+                </div>
+
+                <div class="card text-center">
+                    <div class="card__icon-circle mx-auto">🌏</div>
+                    <h3 class="card__title text-lg">母国語サポート</h3>
+                    <p class="text-sm text-gray-600">
+                        ベトナム人スタッフが在籍し、実習生が母国語で相談できる体制を整えています。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="l-section bg-sky" id="system">
+        <div class="l-container">
+            <div class="section-title section-title--center">
+                <span class="section-title__bar"></span>
+                <h2 class="section-title__text">外国人材の受入れ制度について</h2>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col md:flex-row">
+                <div class="md:w-1/2 bg-gray-200 min-h-[300px] relative">
+                    <img src="https://placehold.co/800x600/e5e7eb/9ca3af?text=Work+Scene" alt="作業風景" class="absolute inset-0 w-full h-full object-cover">
+                </div>
+                
+                <div class="p-8 md:w-1/2 flex flex-col justify-center">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">制度の「今」と「これから」</h3>
+                    <p class="text-gray-600 text-sm mb-4">
+                        現在、外国人材の受入れ制度としては「技能実習制度」が中心となっていますが、今後は新たな「育成就労制度」へ段階的に移行していく予定です。
+                    </p>
+                    <p class="text-gray-600 text-sm mb-6">
+                        Dream come true協同組合では、制度変更の動きも踏まえながら、企業さまにとって分かりやすく、無理のない受入れをご提案します。
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="ginou-jisshu.html" class="btn btn--secondary text-sm py-2 px-4">技能実習制度の詳細</a>
+                        <a href="ikusei-shuro.html" class="btn btn--secondary text-sm py-2 px-4">育成就労制度の詳細</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="l-section bg-white">
+        <div class="l-container">
+            <div class="section-title section-title--center">
+                <span class="section-title__bar"></span>
+                <h2 class="section-title__text">選ばれる理由</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="card">
+                    <div class="card__icon-circle">💬</div>
+                    <h3 class="card__title text-base">母国語での相談体制</h3>
+                    <p class="text-sm text-gray-600">
+                        実習生が困ったときに、すぐに母国語（ベトナム語等）で相談できる環境を用意しています。
+                    </p>
+                </div>
+                <div class="card">
+                    <div class="card__icon-circle">👀</div>
+                    <h3 class="card__title text-base">丁寧な巡回・面談</h3>
+                    <p class="text-sm text-gray-600">
+                        定期的に企業さまと実習生の双方から状況を確認し、小さな違和感の段階からフォローします。
+                    </p>
+                </div>
+                <div class="card">
+                    <div class="card__icon-circle">📄</div>
+                    <h3 class="card__title text-base">書類準備サポート</h3>
+                    <p class="text-sm text-gray-600">
+                        複雑な申請書類の案内や内容整理を丁寧に行い、初めての企業さまでもスムーズに進められます。
+                    </p>
+                </div>
+                <div class="card">
+                    <div class="card__icon-circle">🔍</div>
+                    <h3 class="card__title text-base">透明性の高い運営</h3>
+                    <p class="text-sm text-gray-600">
+                        不適切な費用徴収を行わず、法令を遵守したクリーンな運営を徹底しています。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="l-section bg-sky">
+        <div class="l-container">
+            <div class="section-title section-title--center">
+                <span class="section-title__bar"></span>
+                <h2 class="section-title__text">よくあるご質問</h2>
+            </div>
+
+            <div class="max-w-3xl mx-auto space-y-4">
+                <div class="accordion" onclick="toggleAccordion(this)">
+                    <div class="accordion__header">
+                        <span>Q. どのような費用がかかりますか？</span>
+                        <span class="accordion__icon">＋</span>
+                    </div>
+                    <div class="accordion__body">
+                        渡航費、入国前教育費、監理費、寮費などがあります。人数や地域により異なるため、面談後に個別にお見積りいたします。
+                    </div>
+                </div>
+
+                <div class="accordion" onclick="toggleAccordion(this)">
+                    <div class="accordion__header">
+                        <span>Q. 賃金はどのように決めればよいですか？</span>
+                        <span class="accordion__icon">＋</span>
+                    </div>
+                    <div class="accordion__body">
+                        最低賃金以上が必須です。日本人従業員と同等の作業を行う場合は、同等の水準とすることが一般的です。
+                    </div>
+                </div>
+
+                <div class="accordion" onclick="toggleAccordion(this)">
+                    <div class="accordion__header">
+                        <span>Q. 面接はどのような方法で行いますか？</span>
+                        <span class="accordion__icon">＋</span>
+                    </div>
+                    <div class="accordion__body">
+                        現地での対面面接、またはオンライン面接（Zoom等）から、ご都合に合わせて選択いただけます。
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-8">
+                <a href="faq.html" class="btn btn--secondary">FAQをもっと見る</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-blue-600 text-white text-center">
+        <div class="l-container">
+            <h2 class="text-2xl md:text-3xl font-bold mb-4">まずはお気軽にご相談ください</h2>
+            <p class="mb-8 text-blue-100 max-w-2xl mx-auto">
+                制度のことがよく分からない、受入れのイメージがつかないという段階でも大歓迎です。<br>
+                貴社の状況に合わせて、無理のない受入れ方法をご提案します。
+            </p>
+            <a href="contact.html" class="btn bg-white text-blue-600 hover:bg-gray-100 border-none shadow-lg">
+                お問い合わせフォームへ
+            </a>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="footer__top l-container">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="md:col-span-2 footer__brand">
+                <div class="footer__logo">
+                    <div class="footer__logo-mark">D</div>
+                    <span>Dream come true協同組合</span>
+                </div>
+                <p class="text-sm opacity-80 leading-relaxed">
+                    友情が照らす未来へ。<br>
+                    日本と世界を、やさしく力強くつないでいく。
+                </p>
+            </div>
+
+            <div>
+                <h4 class="footer__nav-title">メニュー</h4>
+                <ul class="footer__nav-list text-sm space-y-2">
+                    <li><a href="about.html">組合について</a></li>
+                    <li><a href="ginou-jisshu.html">技能実習制度</a></li>
+                    <li><a href="ikusei-shuro.html">育成就労制度</a></li>
+                    <li><a href="join.html">加入案内</a></li>
+                    <li><a href="flow.html">受入れの流れ</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="news.html">お知らせ</a></li>
+                    <li><a href="contact.html">お問い合わせ</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="footer__nav-title">所在地</h4>
+                <p class="text-sm font-bold text-white mt-2">本部</p>
+                <p class="text-sm opacity-80">沖縄県那覇市三原1‐18‐25‐1104</p>
+                
+                <p class="text-sm font-bold text-white mt-4">東京オフィス</p>
+                <p class="text-sm opacity-80">東京都新宿区高田馬場1丁目28-10<br>パンフォーレ三慶ビル1階</p>
+                
+                <p class="text-xs opacity-60 mt-4">監理団体許可番号：許2412000064</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer__bottom">
+        <p>&copy; Dream come true協同組合 All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+    // モバイルナビの開閉
+    function toggleMobileNav() {
+        var nav = document.getElementById('mobileNav');
+        nav.classList.toggle('open');
+        
+        // アイコン切り替え
+        var btn = document.querySelector('.header__menu-toggle');
+        if (nav.classList.contains('open')) {
+            btn.innerHTML = '<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>';
+            document.body.style.overflow = 'hidden';
+        } else {
+            btn.innerHTML = '<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>';
+            document.body.style.overflow = '';
+        }
+    }
+
+    // アコーディオンの開閉
+    function toggleAccordion(element) {
+        element.classList.toggle('open');
+        var icon = element.querySelector('.accordion__icon');
+        if (element.classList.contains('open')) {
+            icon.textContent = '－';
+        } else {
+            icon.textContent = '＋';
+        }
+    }
+</script>
+
+</body>
+</html>

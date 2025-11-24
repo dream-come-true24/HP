@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <title>育成就労制度（新制度）｜Dream come true協同組合</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="育成就労制度（新制度）の概要と、従来の技能実習制度との違いを、企業さま向けに分かりやすくまとめました。今後の制度移行の方向性や企業さまにとってのポイントをご説明します。"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap"
+        rel="stylesheet"
+    >
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="header__inner l-container">
+        <a href="index.html" class="header__logo">
+            <div class="header__logo-mark">D</div>
+            <span>Dream come true協同組合</span>
+        </a>
+
+        <nav class="header__nav">
+            <a href="about.html">組合について</a>
+            <a href="ginou-jisshu.html">技能実習制度</a>
+            <a href="ikusei-shuro.html" class="current">育成就労制度</a>
+            <a href="join.html">加入案内</a>
+            <a href="flow.html">受入れの流れ</a>
+            <a href="faq.html">FAQ</a>
+            <a href="contact.html" class="header__cta">お問い合わせ</a>
+        </nav>
+
+        <button class="header__menu-toggle" aria-label="メニューを開く" onclick="toggleMobileNav()">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+        </button>
+    </div>
+
+    <div id="mobileNav" class="mobile-nav">
+        <div class="flex flex-col space-y-1">
+            <a href="about.html" onclick="toggleMobileNav()">組合について</a>
+            <a href="ginou-jisshu.html" onclick="toggleMobileNav()">技能実習制度</a>
+            <a href="ikusei-shuro.html" onclick="toggleMobileNav()" class="text-blue-600 font-bold">育成就労制度</a>
+            <a href="join.html" onclick="toggleMobileNav()">加入案内</a>
+            <a href="flow.html" onclick="toggleMobileNav()">受入れの流れ</a>
+            <a href="faq.html" onclick="toggleMobileNav()">FAQ</a>
+            <a href="contact.html" onclick="toggleMobileNav()" class="text-blue-600 font-bold">お問い合わせ</a>
+            <a href="news.html" onclick="toggleMobileNav()">お知らせ</a>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="py-16 bg-sky">
+        <div class="l-container text-center">
+            <h1 class="text-3xl sm:text-4xl font-extrabold mb-4 text-gray-900">
+                育成就労制度（新制度）について
+            </h1>
+            <p class="text-gray-600 text-lg">
+                技能実習制度の見直しを受けて、新たに検討されている「育成就労制度」について、<br class="hidden sm:inline">
+                企業さま向けにポイントを整理したページです。
+            </p>
+        </div>
+    </section>
+
+    <section class="l-section">
+        <div class="l-container">
+            <div class="section-title">
+                <span class="section-title__bar"></span>
+                <h2 class="section-title__text">技能実習制度見直しの背景</h2>
+            </div>
+
+            <p class="text-center text-gray-600 max-w-3xl mx-auto mb-12 text-lg">
+                技能実習制度は、「技能移転」を目的として長く運用されてきましたが、<br>
+                近年、制度の実態と目的のギャップなどが課題として指摘されてきました。
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+                <div class="text-gray-700 space-y-4 leading-relaxed">
+                    <p>
+                        こうした状況を踏まえ、国において、制度の「目的」「仕組み」「人材の移動の在り方」などを
+                        見直す議論が進められています。
+                    </p>
+                    <p>
+                        その方向性のひとつとして検討されているのが、
+                        <strong class="text-blue-600 font-bold">「育成就労制度」</strong> です。
+                    </p>
+                    <p>
+                        企業さまにとっても、今後の人材確保の在り方を考えるうえで、
+                        制度の変化を早めに把握しておくことが大切になります。
+                    </p>
+                </div>
+
+                <div class="card bg-blue-50 border-blue-100">
+                    <div class="card__icon-circle text-2xl">📌</div>
+                    <h3 class="card__title">見直しの主なポイント（方向性）</h3>
+                    <div class="text-gray-700 space-y-2 text-sm">
+                        <p>・目的を「技能移転」から「人材の育成と確保」へ整理し直す</p>
+                        <p>・より長期的な就労やキャリア形成を視野に入れた仕組みへ</p>
+                        <p>・転籍（受入れ先の変更）に関するルールの見直し</p>
+                        <p>・不適切な取扱いの防止・監理の強化</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="l-section bg-sky">
+        <div class="l-container">
+            <div class="section-title">
+                <span class="section-title__bar"></span>
+                <h2 class="section-title__text">育成就労制度とは（イメージ）</h2>
+            </div>
+
+            <p class="text-center text-gray-600 max-w-3xl mx-auto mb-8 text-lg">
+                育成就労制度は、<br>
+                <strong class="text-blue-600 font-bold">「労働者としての育成」と「人材確保」</strong> を目的とした新たな在留制度として、<br>
+                検討されている仕組みです。
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="card bg-white border-green-200 shadow-md">
+                    <div class="card__icon-circle text-2xl bg-green-50 text-green-600">🎯</div>
+                    <h3 class="card__title text-green-800">想定される特徴（方向性）</h3>
+                    <div class="text-gray-700 space-y-2 text-sm">
+                        <p>・実習ではなく、就労やキャリア形成の側面をより重視</p>
+                        <p>・一定期間、同じ企業・同じ分野で働きながら育成していく</p>
+                        <p>・人材不足分野での安定した人材確保につながることが期待される</p>
+                        <p>・適切な受入れ体制や指導体制が、これまで以上に重要になる</p>
+                    </div>
+                </div>
+
+                <div class="text-gray-700 space-y-4">
+                    <p>
+                        具体的な運用方法や要件は、国の制度設計・法整備により最終的に定まりますが、
+                        現時点でも、企業さまとしては
+                        <strong class="text-blue-600 font-bold">「長期的に育てる人材」</strong> という視点で外国人材の受入れを考えておくことが重要です。
+                    </p>
+                    <p>
+                        Dream come true協同組合では、最新の動向を追いながら、
+                        制度の移行期にあっても、企業さまが混乱しないよう丁寧に情報提供を行っていきます。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="l-section">
+        <div class="l-container">
+            <div class="section-title">
+                <span class="section-title__bar"></span>
+                <h2 class="section-title__text">技能実習制度との主な違い</h2>
+            </div>
+
+            <p class="text-center text-gray-600 max-w-3xl mx-auto mb-8">
+                現在の議論の方向性をもとに、企業さま視点で分かりやすいように整理した比較イメージです。<br>
+                （※今後の制度設計により内容が変わる可能性があります）
+            </p>
+
+            <div class="card p-0 overflow-x-auto">
+                <table class="w-full border-collapse text-sm md:text-base">
+                    <thead>
+                        <tr class="bg-blue-100 text-blue-900 font-bold">
+                            <th class="p-4 border-b border-blue-200 w-1/5 min-w-[120px]">比較ポイント</th>
+                            <th class="p-4 border-b border-blue-200 w-2/5 min-w-[200px]">従来：技能実習制度</th>
+                            <th class="p-4 border-b border-blue-200 w-2/5 min-w-[200px]">新制度：育成就労制度（案）</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b border-gray-100">
+                            <td class="p-4 bg-gray-50 font-bold text-gray-700">制度の目的</td>
+                            <td class="p-4 text-gray-700">
+                                技能・技術・知識の習得と、本国への技能移転が主な目的。
+                            </td>
+                            <td class="p-4 text-gray-700 font-medium bg-blue-50/30">
+                                労働者として育成しつつ、人材不足分野での人材確保につなげることを重視。
+                            </td>
+                        </tr>
+                        <tr class="border-b border-gray-100">
+                            <td class="p-4 bg-gray-50 font-bold text-gray-700">位置付け</td>
+                            <td class="p-4 text-gray-700">
+                                「実習」が前提。就労はあくまで技能習得の手段という建て付け。
+                            </td>
+                            <td class="p-4 text-gray-700 font-medium bg-blue-50/30">
+                                「就労」と「育成」の両方を見据えた在留制度として整理。
+                            </td>
+                        </tr>
+                        <tr class="border-b border-gray-100">
+                            <td class="p-4 bg-gray-50 font-bold text-gray-700">人材のイメージ</td>
+                            <td class="p-4 text-gray-700">
+                                一定期間、日本で学び、その後は本国で活躍することが前提。
+                            </td>
+                            <td class="p-4 text-gray-700 font-medium bg-blue-50/30">
+                                中長期的に日本で働く人材としてのキャリアも視野に入れた育成を想定。
+                            </td>
+                        </tr>
+                        <tr class="border-b border-gray-100">
+                            <td class="p-4 bg-gray-50 font-bold text-gray-700">転籍・移動</td>
+                            <td class="p-4 text-gray-700">
+                                転籍は限定的で、制度上は原則として例外的な扱い。
+                            </td>
+                            <td class="p-4 text-gray-700 font-medium bg-blue-50/30">
+                                一定のルール（1〜2年経過後など）のもとで、人材の移動を柔軟にする方向性。
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p class="text-xs text-gray-500 mt-4 text-center">
+                ※上記は有識者会議等で示されている方向性をもとにしたイメージであり、最終的な制度内容とは異なる場合があります。
+            </p>
+        </div>
+    </section>
+
+    <section class="l-section bg-sky">
+        <div class="l-container">
+            <div class="section-title">
+                <span class="section-title__bar"></span>
+                <h2 class="section-title__text">企業さまにとってのポイント</h2>
+            </div>
+
+            <p class="text-center text-gray-600 max-w-3xl mx-auto mb-12">
+                制度の名前が変わるだけでなく、<br>
+                「どのような前提で外国人材を受け入れるか」という考え方自体も、少しずつ変わっていく可能性があります。
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="card">
+                    <div class="card__icon-circle">👥</div>
+                    <h3 class="card__title">長期的な人材育成の視点</h3>
+                    <div class="text-gray-600 text-sm space-y-2">
+                        <p>・短期間の「実習生」ではなく、<strong>中長期で育てる人材</strong>としての視点が重要に。</p>
+                        <p>・現場のリーダー候補や、将来的に戦力の中心となる人材として育成するイメージが求められます。</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card__icon-circle">🏢</div>
+                    <h3 class="card__title">受入れ体制・教育体制の強化</h3>
+                    <div class="text-gray-600 text-sm space-y-2">
+                        <p>・単に「人手を増やす」だけでなく、指導担当者やOJTの体制づくりがより重要に。</p>
+                        <p>・日本人従業員とのコミュニケーション・情報共有の仕組みも見直すきっかけになります。</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card__icon-circle">🔍</div>
+                    <h3 class="card__title">制度変更期における情報収集</h3>
+                    <div class="text-gray-600 text-sm space-y-2">
+                        <p>・しばらくは、技能実習と育成就労が「移行期」として併存する期間が想定されます。</p>
+                        <p>・最新の情報を確認しつつ、「自社にとってどの選択肢がよいか」を一緒に考えることが大切です。</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card__icon-circle">🤝</div>
+                    <h3 class="card__title">パートナーとしての監理団体選び</h3>
+                    <div class="text-gray-600 text-sm space-y-2">
+                        <p>・制度が変わる時期だからこそ、誠実で情報提供が丁寧な監理団体と組むことが重要です。</p>
+                        <p>・Dream come true協同組合は、企業さまの状況に合わせて分かりやすくご説明します。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="l-section">
+        <div class="l-container">
+            <div class="section-title">
+                <span class="section-title__bar"></span>
+                <h2 class="section-title__text">よくあるご質問</h2>
+            </div>
+
+            <div class="max-w-3xl mx-auto space-y-4">
+                <div class="accordion" onclick="toggleAccordion(this)">
+                    <div class="accordion__header">
+                        <span>Q. 今は、技能実習と育成就労のどちらを使えばよいですか？</span>
+                        <span class="accordion__icon">＋</span>
+                    </div>
+                    <div class="accordion__body">
+                        現時点では技能実習制度を前提とした受入れが基本となりますが、
+                        制度変更の動きを踏まえながら、企業さまの人員計画・時期に合わせてご提案いたします。
+                    </div>
+                </div>
+
+                <div class="accordion" onclick="toggleAccordion(this)">
+                    <div class="accordion__header">
+                        <span>Q. すでに技能実習生を受け入れている場合、何か準備が必要ですか？</span>
+                        <span class="accordion__icon">＋</span>
+                    </div>
+                    <div class="accordion__body">
+                        すぐに大きな変更を行う必要があるとは限りませんが、
+                        今後の方針を一緒に確認しておくことで、制度変更期の混乱を減らすことができます。
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8 text-center">
+                <a href="faq.html" class="btn btn--secondary">FAQページへ</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-blue-600 text-white text-center">
+        <div class="l-container">
+            <h2 class="text-2xl md:text-3xl font-bold mb-4">制度が変わるタイミングこそ、早めのご相談を。</h2>
+            <p class="mb-8 text-blue-100 max-w-2xl mx-auto text-lg">
+                「ニュースは見ているけれど、何から考えればいいか分からない…」という段階でも大丈夫です。<br>
+                貴社の業種・規模・今後の人材計画を伺い、分かりやすくご説明いたします。
+            </p>
+            <a href="contact.html" class="btn bg-white text-blue-600 hover:bg-gray-100 border-none shadow-lg">
+                制度の方向性について相談する
+            </a>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="footer__top l-container">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="md:col-span-2 footer__brand">
+                <div class="footer__logo">
+                    <div class="footer__logo-mark">D</div>
+                    <span>Dream come true協同組合</span>
+                </div>
+                <p class="text-sm opacity-80 leading-relaxed">
+                    友情が照らす未来へ。<br>
+                    日本と世界を、やさしく力強くつないでいく。
+                </p>
+            </div>
+
+            <div>
+                <h4 class="footer__nav-title">メニュー</h4>
+                <ul class="footer__nav-list text-sm space-y-2">
+                    <li><a href="about.html">組合について</a></li>
+                    <li><a href="ginou-jisshu.html">技能実習制度</a></li>
+                    <li><a href="ikusei-shuro.html">育成就労制度</a></li>
+                    <li><a href="join.html">加入案内</a></li>
+                    <li><a href="flow.html">受入れの流れ</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="news.html">お知らせ</a></li>
+                    <li><a href="contact.html">お問い合わせ</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="footer__nav-title">所在地</h4>
+                <p class="text-sm font-bold text-white mt-2">本部</p>
+                <p class="text-sm opacity-80">沖縄県那覇市三原1‐18‐25‐1104</p>
+                
+                <p class="text-sm font-bold text-white mt-4">東京オフィス</p>
+                <p class="text-sm opacity-80">東京都新宿区高田馬場1丁目28-10<br>パンフォーレ三慶ビル1階</p>
+                
+                <p class="text-xs opacity-60 mt-4">監理団体許可番号：許2412000064</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer__bottom">
+        <p>&copy; Dream come true協同組合 All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+    function toggleMobileNav() {
+        var nav = document.getElementById('mobileNav');
+        nav.classList.toggle('open');
+        var btn = document.querySelector('.header__menu-toggle');
+        if (nav.classList.contains('open')) {
+            btn.innerHTML = '<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>';
+            document.body.style.overflow = 'hidden';
+        } else {
+            btn.innerHTML = '<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>';
+            document.body.style.overflow = '';
+        }
+    }
+
+    function toggleAccordion(element) {
+        element.classList.toggle('open');
+        var icon = element.querySelector('.accordion__icon');
+        if (element.classList.contains('open')) {
+            icon.textContent = '－';
+        } else {
+            icon.textContent = '＋';
+        }
+    }
+</script>
+
+</body>
+</html>
