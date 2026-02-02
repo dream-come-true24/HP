@@ -342,16 +342,18 @@ a {
 
 /* ヒーローエリア (index.html) */
 .hero-bg {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://placehold.co/1200x800/2E7DD7/ffffff?text=Dream+come+true');
-    background-size: cover;
-    background-position: center;
-    height: 600px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url('./images/hero.png');
+  background-size: cover;
+  background-position: center;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
 }
+
 
 /* アコーディオン (FAQ) */
 .accordion {
@@ -385,4 +387,5 @@ a {
     font-size: 1.5rem;
     font-weight: bold;
     color: var(--color-primary);
+
 }
